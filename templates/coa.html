@@ -1,0 +1,427 @@
+
+{% include "permanent.html" %}
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" >
+
+<!-- Navbar -->
+<nav class="navbar sticky-top justify-content-center navbar-expand-sm bg-dark navbar-dark ">
+<br>
+
+
+    <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="#section1">Fundamentals of Logic Design</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">Overview of Computer Architecture and Organization</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Processor Organization and Architecture</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section4">Data Representation and Arithmetic Algorithm</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section5">Memory Organization</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section6">I/O Organization</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://drive.google.com/drive/u/0/folders/1Xz1wHPKA1YVNcf27gxp290p0OyHCOzdp">PYQ</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+    <h1>Fundamentals of Logic Design</h1>
+    <ul><li><h2>Number System</h2></li></ul>
+    Number system is important from the viewpoint of understanding how data are represented before they can be processed by any digital system including a digital computer. there are two basic ways of representing the numerical values of the various physical quantities with which we constantly deal in our day to day lives. The arithmetic value which is used for representing the quantity and used in making calculations are defined as NUMBERS. A symbol like “4, 5, 6” which represents a number is known as numerals. Without numbers, counting things is not possible, date, time, money, etc. these numbers are also used for measurement and used for labelling. The properties of numbers make them helpful in performing arithmetic operations on them.  These numbers can be written in numeric forms and also in words.
+    <h4>Number and its Types</h4>
+    <ol><li><b>Natural Numbers</b> are the most basic type of Numbers that range from 1 to infinity. These numbers are also called Positive Numbers or Counting Numbers. Natural Numbers are represented by the symbol N.</li>
+    <br><li><b>Whole Numbers</b> are basically the Natural Numbers, but they also include ‘zero’. Whole numbers are represented by the symbol W.</li>
+    <br><li><b>Integers</b> are the collection of Whole Numbers plus the negative values of the Natural Numbers. Integers do not include fraction numbers i.e. they can’t be written in a/b form. The range of Integers is from the Infinity at the Negative end and Infinity at the Positive end, including zero. Integers are represented by the symbol Z.</li>
+    <br><li><b>Rational numbers</b> are the numbers that can be represented in the fraction form i.e. a/b. Here, a and b both are integers and b≠0. All the fractions are rational numbers but not all the rational numbers are fractions.</li>
+    <br><li><b>Irrational numbers</b> are the numbers that can’t be represented in the form of fractions i.e. they can not be written as a/b.</li>
+    <br><li>Numbers that do not have any factors other than 1 and the number itself are termed as <b>Prime Numbers</b>. All the numbers other than Prime Numbers are termed as <b>Composite Numbers</b> except 0. Zero is neither prime nor a composite number.</li></ol>
+  <h4>Types of Number Systems</h4>
+  Based on the base value and the number of allowed digits, number systems are of many types. The four common types of Number System are:
+<br><ol>
+<li>Decimal Number System</li>
+<li>Binary Number System</li>
+<li>Octal Number System</li>
+<li>Hexadecimal Number System</li></ol>
+<ol>
+<b><li>Decimal Number System:-</li></b> 
+Number system with a base value of 10 is termed a Decimal number system. It uses 10 digits i.e. 0-9 for the creation of numbers. Here, each digit in the number is at a specific place with place value a product of different powers of 10. Here, the place value is termed from right to left as first place value called units, second to the left as Tens, so on Hundreds, Thousands, etc. Here, units have the place value as 100, tens have the place value as 101, hundreds as 102, thousands as 103, and so on.
+<br>For example, 10264 has place values as,
+<br>
+(1 × 10<sup>4</sup>) + (0 × 10<sup>3</sup>) + (2 × 10<sup>2</sup>) + (6 × 10<sup>1</sup>) + (4 × 10<sup>0</sup>)
+<br>
+= 1 × 10000 + 0 × 1000 + 2 × 100 + 6 × 10 + 4 × 1
+<br>
+= 10000 + 0 + 200 + 60 + 4
+<br>
+= 10264  
+<b><li>Binary Number System </li></b>
+
+  Number System with base value 2 is termed as Binary number system. It uses 2 digits i.e. 0 and 1 for the creation of numbers. The numbers formed using these two digits are termed Binary Numbers. The binary number system is very useful in electronic devices and computer systems because it can be easily performed using just two states ON and OFF i.e. 0 and 1.
+  
+  Decimal Numbers 0-9 are represented in binary as: 0, 1, 10, 11, 100, 101, 110, 111, 1000, and 1001
+  <br>
+  For example, 14 can be written as 1110, 19 can be written as 10011, 50 can be written as 110010.
+  <br>
+  <b><li>Octal Number System</li></b> 
+
+  Octal Number System is one in which the base value is 8. It uses 8 digits i.e. 0-7 for the creation of Octal Numbers. Octal Numbers can be converted to Decimal values by multiplying each digit with the place value and then adding the result. Here the place values are 80, 81, and 82. Octal Numbers are useful for the representation of UTF8 Numbers.<br>Example,
+  <br>
+  (135)<sub>10</sub> can be written as (207)<sub>8</sub>
+  <br>
+  (215)<sub>10</sub> can be written as (327)<sub>8</sub>
+ 
+  <b><li> Hexadecimal Number System</li></b> 
+
+Number System with base value 16 is termed as Hexadecimal Number System. It uses 16 digits for the creation of its numbers. Digits from 0-9 are taken like the digits in the decimal number system but the digits from 10-15 are represented as A-F i.e. 10 is represented as A, 11 as B, 12 as C, 13 as D, 14 as E, and 15 as F. Hexadecimal Numbers are useful for handling memory address locations.The hexadecimal number system provides a condensed way of representing large binary numbers stored and processed.<br>Examples,
+<br>
+(255)<sub>10</sub>  can be written as (FF)<sub>16</sub>
+<br>
+(1096)<sub>10</sub>  can be written as (448)<sub>16</sub>
+<br>
+(4090)<sub>10</sub>  can be written as (FFA)<sub>16</sub>
+<ul><li><h2>combinational Circuit:-</h2></li></ul>
+<h4>AND Gates:-</h4>
+The AND gate is an electronic circuit which gives a high output only if all its inputs are high. The AND operation is represented by a dot (.) sign.  
+<h4>OR Gates</h4>
+The OR gate is an electronic circuit which gives a high output if one or more of its inputs are high. The operation performed by an OR gate is represented by a plus (+) sign.
+<h4>NOT GATE:</h4>
+The NOT gate is an electronic circuit which produces an inverted version of the input at its output. It is also known as an Inverter.
+
+<h4>NAND GATE:</h4>
+The NOT-AND (NAND) gate which is equal to an AND gate followed by a NOT gateThe equation obtained by the EX-OR gate is the sum of the binary digits. While the output obtained by AND gate is the carry obtained by addition. . The NAND gate gives a high output if any of the inputs are low. The NAND gate is represented by a AND gate with a small circle on the output. The small circle represents inversion.
+<h4>NOR GATE:</h4>
+The NOT-OR (NOR) gate which is equal to an OR gate followed by a NOT gate. The NOR gate gives a low output if any of the inputs are high. The NOR gate is represented by an OR gate with a small circle on the output. The small circle represents inversion.    
+<h4>Exclusive-OR/ XOR GATE:</h4>
+The 'Exclusive-OR' gate is a circuit which will give a high output if one of its inputs is high but not both of them. The XOR operation is represented by an encircled plus sign.
+<h4>EXCLUSIVE-NOR/Equivalence GATE:</h4>
+The 'Exclusive-NOR' gate is a circuit that does the inverse operation to the XOR gate. It will give a low output if one of its inputs is high but not both of them. The small circle represents inversion.
+<ul><li><h2>Half Adder and Full Adder:-</h2></li></ul>
+<b>1. Half Adder :</b> Half Adder is a combinational logic circuit which is designed by connecting one EX-OR gate and one AND gate. The half adder circuit has two inputs: A and B, which add two input digits and generates a carry and a sum.
+The output obtained from the EX-OR gate is the sum of the two numbers while that obtained by AND gate is the carry. There will be no forwarding of carry addition because there is no logic gate to process that. Thus, this is called the Half Adder circuit.
+<br><b>Logical Expression :</b>
+<br>
+Sum = A XOR B
+<br>Carry = A AND B 
+<br><b>2. Full Adder:</b> Full Adder is the circuit that consists of two EX-OR gates, two AND gates, and one OR gate. Full Adder is the adder that adds three inputs and produces two outputs which consist of two EX-OR gates, two AND gates, and one OR gate. The first two inputs are A and B and the third input is an input carry as C-IN. The output carry is designated as C-OUT and the normal output is designated as S which is SUM.
+The equation obtained by the EX-OR gate is the sum of the binary digits. While the output obtained by AND gate is the carry obtained by addition. 
+<br><b>Logical Expression :</b><br>
+
+SUM = (A XOR B) XOR C<sub>in</sub> = (A ⊕ B) ⊕ C<sub>in</sub>
+<br>CARRY-OUT = A AND B OR C<sub>in</sub>(A XOR B) = A.B + C<sub>in</sub>(A ⊕ B)
+<ul><li><h2>Multiplexers and Demultiplexers:-</h2></li></ul>
+1. <b>Multiplexer</b> is a data selector which takes several inputs and gives a single output.In multiplexer we have 2n input lines and 1 output lines where n is the number of selection lines.
+<br>2. <b>Demultiplexer</b> is a data distributor which takes a single input and gives several outputs.In demultiplexer we have 1 input and 2n output lines where n is the selection line.
+<ul><li><h2>Encoder</h2></li></ul>
+An Encoder is a device that converts the active data signal into a coded message format or it is a device that converts analogue signal to digital signals. It is a combinational circuit, that converts binary information in the form of 2N input lines into N output lines which represent N bit code for the input. When an input signal is applied to an encoder the logic circuitry involved within it converts that particular input into coded binary output.
+To decode is to perform the reverse operation: converting a code back into an unambiguous form code and the device which performs this operation is termed a Decoder. 
+<ul><li><h2>Decoder</h2></li></ul>
+A decoder is also a combinational circuit as an encoder but its operation is exactly reverse as that of the encoder. A decoder is a device that generates the original signal as output from the coded input signal and converts n lines of input into 2n lines of output. An AND gate can be used as the basic decoding element because it produces a high output only when all inputs are high. 
+
+<h1><a href="https://youtu.be/Qa6csfkK7_I?si=aJXWohha1trfar2D">To get More Information ...</a></h1>
+  </div>
+<!-- pcpf -->
+
+<div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+  <h1>Overview of Computer Architecture and Organization</h1>
+<ul><li><h2>Computer Organization and Architecture:-</h2></li></ul>
+  Computer Organization and Architecture is used to design computer systems. Computer Architecture is considered to be those attributes of a system that are visible to the user like addressing techniques, instruction sets, and bits used for data, and have a direct impact on the logic execution of a program, It defines the system in an abstract manner, It deals with What does the system do.
+  
+  Whereas, Computer Organization is the way in which a system has to structure and It is operational units and the interconnections between them that achieve the architectural specifications, It is the realization of the abstract model, and It deals with How to implement the system.
+  
+  In this Computer Organization and Architecture Tutorial, you’ll learn all the basic to advanced concepts like pipelining, microprogrammed control, computer architecture, instruction design, and format.
+  <ul><li><h2>Von Neumann architecture</h2></li></ul>
+  Von-Neumann  computer architecture design was proposed in 1945.It was later known as Von-Neumann architecture. 
+  
+  Historically there have been 2 types of Computers: 
+  <br>
+  <ol><b><li>Fixed Program Computers – </li></b>Their function is very specific and they couldn’t be reprogrammed, e.g. Calculators. 
+  <br><b><li>Stored Program Computers –</li></b> These can be programmed to carry out many different tasks, applications are stored on them, hence the name.</ol> 
+  Modern computers are based on a stored-program concept introduced by John Von Neumann. In this stored-program concept, programs and data are stored in a separate storage unit called memories and are treated the same. This novel idea meant that a computer built with this architecture would be much easier to reprogram.
+<br>It is also known as <b>ISA</b> (Instruction set architecture) computer and is having three basic units:  
+<br><ol>
+  <li>The Central Processing Unit (CPU) </li>
+  <li>The Main Memory Unit </li>
+  <li>The Input/Output Device Let’s consider them in detail.</li></ol>
+           <ul><b> <li>Central Processing Unit-</li></b></ul>
+  
+            The central processing unit is defined as the it is an electric circuit used for the executing the instruction of computer program.
+  
+            <br>It has following major components:
+  
+            <br>1.Control Unit(CU)
+  <br>
+            2.Arithmetic and Logic Unit(ALU)
+  <br>
+  1. Control Unit – 
+ <br> A control unit (CU) handles all processor control signals. It directs all input and output flow, fetches code for instructions, and controls how data moves around the system. 
+     <br>2. Arithmetic and Logic Unit (ALU) – 
+  <br>The arithmetic logic unit is that part of the CPU that handles all the calculations the CPU may need, e.g. Addition, Subtraction, Comparisons. It performs Logical Operations, Bit Shifting Operations, and Arithmetic operations.
+<ul><li><h2>Architecture of 8060 Family</h2></li></ul>
+The 8086 microprocessor family, developed by Intel in the late 1970s and early 1980s, laid the groundwork for modern x86 architecture, which is still widely used today. Here's an overview of the architecture of the 8086 family:
+
+<ol><li><b>16-bit Architecture:</b></li> The 8086 family is based on a 16-bit architecture. This means that the processor operates on data in 16-bit chunks. It can process data and addresses in 16-bit units.
+
+<li><b>Registers:</b></li> The 8086 family includes several registers, each serving a specific purpose:
+
+<ul><li><b>General-Purpose Registers:</b></li> AX, BX, CX, DX, SI, DI, BP, and SP are general-purpose registers. They can hold data and addresses and are used for arithmetic, data manipulation, and addressing calculations.
+<li><b>Segment Registers:</b></li> CS (Code Segment), DS (Data Segment), SS (Stack Segment), and ES (Extra Segment) are segment registers. They hold segment addresses, which are combined with offsets to form physical memory addresses. This architecture employs a segmented memory model, allowing access to up to 1 MB of memory.
+<li><b>Instruction Pointer (IP):</b></li> IP holds the offset within the code segment of the current instruction being executed.</ul>
+<li><b>Instruction Set:</b></li> The instruction set of the 8086 family is considered complex, supporting a wide variety of operations. Instructions can be categorized into several groups:
+
+<ul><li><b>Data Transfer:</li></b> Instructions for moving data between registers, memory, and I/O devices.
+<li><b>Arithmetic and Logic:</b></li> Instructions for arithmetic operations (addition, subtraction, multiplication, division) and logical operations (AND, OR, XOR, NOT).
+<li><b>Control Transfer:</b></li> Instructions for controlling program flow, such as jumps, calls, and returns.
+<li><b>String Manipulation:</b></li> Instructions optimized for working with strings of data.
+<li><b>I/O Operations:</b></li> Instructions for input and output operations.</ul>
+<li><b>Memory Segmentation:</b></li> The 8086 family uses a segmented memory model. Memory is divided into segments, each identified by a segment register. Addresses within segments are specified by an offset. This segmentation scheme allows for efficient memory addressing and supports multitasking.
+
+<li><b>Interrupts and Interrupt Handling:</b></li> The 8086 family supports interrupts for handling asynchronous events. Interrupts can be generated by external devices or internal conditions. When an interrupt occurs, the processor saves its state and jumps to an interrupt handler routine.
+
+<li><b>Clock Speed:</b></li> The clock speed of early 8086 processors ranged from 5 to 10 MHz. Later versions of the family, such as the 80186 and 80286, operated at higher frequencies.</ol>
+
+Overall, the architecture of the 8086 family played a crucial role in the development of personal computing and laid the foundation for subsequent generations of x86 processors.
+
+<ul><li><h2>Addressing Modes</h2></li></ul>
+Addressing modes in computer organization and architecture define the various methods by which a CPU can specify the operand(s) of an instruction. Each addressing mode provides different ways to access data or operands from memory or registers. Here are some common addressing modes:
+<br>
+<b>1. Immediate Addressing:</b> In this mode, the operand is specified explicitly in the instruction itself. For example, `MOV AX, 5` loads the immediate value 5 into the AX register.
+<br>
+<b>2. Direct Addressing:</b> Also known as absolute addressing, this mode specifies the memory address of the operand directly within the instruction. For example, `MOV AX, [1234H]` loads the value stored at memory address 1234H into the AX register.
+<br>
+<b>3. Indirect Addressing:</b> In this mode, the instruction specifies a memory address where the actual address of the operand is stored. The CPU then retrieves the operand from the memory location pointed to by this address. For example, `MOV AX, [BX]` loads the value stored at the memory address pointed to by the BX register into the AX register.
+<br>
+<b>4. Register Addressing:</b> Operand(s) are stored in registers, and the instruction specifies the register(s) directly. For example, `ADD AX, BX` adds the value of register BX to register AX.
+<br>
+<b>5. Indexed Addressing:</b> This mode involves adding an offset to a base address held in a register to form the effective address. For example, `MOV AX, [SI+10]` loads the value stored at the memory address pointed to by the sum of the SI register value and 10 into the AX register.
+<br>
+<b>6. Relative Addressing:</b> Also known as PC-relative addressing, this mode calculates the effective address by adding a constant value to the program counter (PC). It is often used for specifying branch targets. For example, `JMP LABEL` jumps to the memory location labeled "LABEL".
+<br>
+<b>7. Base-Displacement Addressing:</b> Similar to indexed addressing, but uses a base register and a constant offset specified in the instruction. For example, `MOV AX, [BX+10]` loads the value stored at the memory address pointed to by the sum of the BX register value and 10 into the AX register.
+<br>
+<b>8. Stack Addressing:</b> In this mode, operands are implicitly or explicitly accessed from the stack. Common operations include push and pop instructions.
+<br>
+Different CPUs and architectures may support different addressing modes, and the choice of addressing mode can impact the efficiency and flexibility of instruction execution.
+
+<h4><ul><li>Assembler Directives:</li></ul></h4> Assembler directives are instructions to the assembler, the program that translates assembly language into machine code, rather than instructions for the CPU. These directives provide guidance to the assembler on how to process the source code. Examples of assembler directives include directives for defining constants, allocating memory space, including external files, and setting up program sections. Common assembler directives include `ORG`, `DB` (define byte), `DW` (define word), `DS` (define storage), `EQU` (equation), and `END`.
+
+<h4><ul><li>Mixed Language Programming:</li></ul></h4> Mixed language programming involves writing programs using more than one programming language in the same project or program. In the context of computer organization and architecture, mixed language programming might involve combining assembly language with a higher-level language like C or Fortran. This approach allows developers to leverage the performance benefits and low-level control of assembly language while also taking advantage of the productivity and readability of higher-level languages.
+
+<h4><ul><li>Stack:</li></ul></h4> The stack is a data structure used in computer memory for storing and managing program data temporarily. It follows the Last In, First Out (LIFO) principle, meaning that the last item pushed onto the stack is the first one to be popped off. The stack is commonly used for storing local variables, function parameters, return addresses, and other data during program execution. CPUs typically provide instructions for manipulating the stack, such as push (to add data to the stack) and pop (to remove data from the stack).
+
+<h4><ul><li>Procedure:</li></ul></h4> A procedure, also known as a subroutine or function, is a self-contained block of code within a program that performs a specific task. Procedures are used to organize code, improve code reusability, and modularize programs. In assembly language, procedures are often implemented using labels and branching instructions for control flow. Parameters may be passed to procedures via registers, the stack, or a combination of both. Procedures typically have a return address stored on the stack to facilitate returning control to the calling code after execution.
+
+<h4><ul><li>Macro:</li></ul></h4> A macro is a sequence of instructions or statements that is given a name and can be invoked or expanded inline within a program. Macros are commonly used to simplify repetitive or complex coding tasks by encapsulating them into reusable units. In assembly language, macros are defined using assembler directives such as `MACRO` and `ENDM`. When the macro is invoked, the assembler expands it into the corresponding instructions or statements. Macros can accept parameters and generate code based on those parameters, providing a powerful mechanism for code generation and abstraction.
+
+<br>These concepts are fundamental to understanding and programming at the assembly language level, allowing developers to write efficient and optimized code for specific hardware architectures.
+  <h1><a href="">To get More Information ...</a></h1>
+</div>
+
+<div id="section3" class="container-fluid bg-info  text-white" style="padding:100px 20px;">
+ <h1>Processor Organization and Architecture</h1>
+<ol><h4><li>CPU Architecture:</li></h4>
+
+<ul><li>The CPU (Central Processing Unit) is the brain of the computer responsible for executing instructions, performing calculations, and managing data.</li>
+<li>CPU architecture includes components such as the arithmetic logic unit (ALU), control unit, registers, cache memory, and buses.</li>
+<li>Different CPU architectures may vary in terms of instruction set architecture (ISA), word size, addressing modes, and execution pipelines.</li></ul>
+<h4><li>Instruction Formats:</li></h4>
+
+<ul><li>Instruction formats define the structure of machine instructions, including opcode (operation code), operand(s), addressing mode, and other fields.</li>
+<li>Common instruction formats include fixed-length, variable-length, and hybrid formats, depending on the architecture.</li></ul>
+<h4><li>Basic Instruction Cycle with Interrupt Processing:</li></h4>
+
+<ul><li>The basic instruction cycle, also known as the fetch-decode-execute cycle, is the fundamental process by which a CPU executes instructions.</li>
+<li>It involves fetching the next instruction from memory, decoding it to determine the operation to be performed, fetching operands if necessary, executing the instruction, and storing the result.</li>
+<li>Interrupt processing involves handling asynchronous events that temporarily suspend normal program execution. When an interrupt occurs, the CPU saves its current state, switches to the interrupt handler routine, and later returns to the interrupted program.</li></ul>
+<h4><li>Instruction Interpretation and Sequencing:</li></h4>
+
+<ul><li>Instruction interpretation involves decoding the opcode and operands of an instruction to determine the action to be performed.</li>
+<li>Instruction sequencing refers to the order in which instructions are executed by the CPU, typically following the program counter (PC) and control flow instructions (e.g., branches, jumps).</li></ul>
+<h4><li>Control Unit: Soft-Wired (Microprogrammed) and Hardwired Control Unit Design Methods:</li></h4>
+
+<ul><li>The control unit manages the execution of instructions and coordinates the operation of other CPU components.</li>
+<li>In hardwired control units, control signals are generated directly by combinational logic circuits.</li>
+<li>In microprogrammed control units, control signals are generated by a sequence of microinstructions stored in a control memory (microcode ROM).</li></ul>
+<h4><li>Microinstruction Sequencing and Execution:</li></h4>
+
+<ul><li>Microinstruction sequencing involves fetching and executing microinstructions from the microcode ROM.</li>
+<li>Microinstructions perform low-level operations such as setting control signals, accessing registers, and performing arithmetic/logical operations.</li></ul>
+<h4><li>Microoperations, Concepts of Nanoprogramming:</li></h4>
+
+<ul><li>Microoperations are elementary operations performed by the CPU, such as register transfers, arithmetic/logical operations, and control signal manipulation.</li>
+<li>Nanoprogramming involves designing microprograms at a very fine-grained level, often at the level of individual microoperations, to optimize performance and efficiency.</li></ul>
+</ol>
+<ul><li><h2>Flynn’s classification</h2></li></ul>
+<ol><li><b>Single-instruction, single-data (SISD) systems –</b></li>
+An SISD computing system is a uniprocessor machine which is capable of executing a single instruction, operating on a single data stream. In SISD, machine instructions are processed in a sequential manner and computers adopting this model are popularly called sequential computers. Most conventional computers have SISD architecture. All the instructions and data to be processed have to be stored in primary memory.
+The speed of the processing element in the SISD model is limited(dependent) by the rate at which the computer can transfer information internally. Dominant representative SISD systems are IBM PC, workstations.
+
+<li><b>Single-instruction, multiple-data (SIMD) systems –</b></li>
+An SIMD system is a multiprocessor machine capable of executing the same instruction on all the CPUs but operating on different data streams. Machines based on an SIMD model are well suited to scientific computing since they involve lots of vector and matrix operations. So that the information can be passed to all the processing elements (PEs) organized data elements of vectors can be divided into multiple sets(N-sets for N PE systems) and each PE can process one data set.
+
+<li><b>Multiple-instruction, single-data (MISD) systems –</b></li>
+An MISD computing system is a multiprocessor machine capable of executing different instructions on different PEs but all of them operating on the same dataset .
+The system performs different operations on the same data set. Machines built using the MISD model are not useful in most of the application, a few machines are built, but none of them are available commercially.
+<li><b>Multiple-instruction, multiple-data (MIMD) systems –</b></li>
+An MIMD system is a multiprocessor machine which is capable of executing multiple instructions on multiple data sets. Each PE in the MIMD model has separate instruction and data streams; therefore machines built using this model are capable to any kind of application. Unlike SIMD and MISD machines, PEs in MIMD machines work asynchronously.
+MIMD machines are broadly categorized into shared-memory MIMD and distributed-memory MIMD based on the way PEs are coupled to the main memory.
+
+In the shared memory MIMD model (tightly coupled multiprocessor systems), all the PEs are connected to a single global memory and they all have access to it. The communication between PEs in this model takes place through the shared memory, modification of the data stored in the global memory by one PE is visible to all other PEs. Dominant representative shared memory MIMD systems are Silicon Graphics machines and Sun/IBM’s SMP (Symmetric Multi-Processing).
+<br>In Distributed memory MIMD machines (loosely coupled multiprocessor systems) all PEs have a local memory. The communication between PEs in this model takes place through the interconnection network (the inter process communication channel, or IPC). The network connecting PEs can be configured to tree, mesh or in accordance with the requirement.
+<br>The shared-memory MIMD architecture is easier to program but is less tolerant to failures and harder to extend with respect to the distributed memory MIMD model. Failures in a shared-memory MIMD affect the entire system, whereas this is not the case of the distributed model, in which each of the PEs can be easily isolated. Moreover, shared memory MIMD architectures are less likely to scale because the addition of more PEs leads to memory contention. This is a situation that does not happen in the case of distributed memory, in which each PE has its own memory. As a result of practical outcomes and user’s requirement , distributed memory MIMD architecture is superior to the other existing models.</ol>
+  
+<ul><li><h2>Instruction Pipeline</h2></li></ul>
+An instruction pipeline reads consecutive instructions from memory while in the other segments the previous instructions are being implemented. Pipeline processing appears both in the data flow and in the instruction stream. This leads to the overlapping of the fetch and executes the instruction and hence simultaneous operations are performed.
+
+There is one possible more event associated with such a design is that instruction can generate a branch out of a sequence. In this method, the pipeline is clear and all the instructions that have previously been read from memory after the branch instruction should be rejected.
+
+A computer can be constructed to support a two-segment unit, with an instruction fetch unit and an instruction execution unit. Using a first-in, first-out (FIFO) buffer the instruction fetch segment is implemented.
+
+This is a method of a unit forming a queue instead of a stack. When the implementation unit is not creating the memory, the control increments the program counter and helps its address value to read consecutive instructions from memory.
+
+The instructions are inserted into the FIFO buffer so that the implementation appears on a FIFO basis. Therefore an instruction flow can be located in a queue to wait for decoding and phasing by the implementation segment.
+
+Therefore, the instruction stream queuing structure offers an effective approach for decreasing the average access time for memory to read instructions. Whenever there is an area in the FIFO buffer, the control unit starts the next instruction fetch step.
+
+The buffer facilitates as a queue from which regulate then derive the instructions for the implementation unit.
+
+A device with complex instructions needed other steps in addition to the fetch and execute to process an instruction thoroughly. In this method, the device requires to process each instruction with the following series of steps.
+<ul>
+<li>It can fetch instruction from memory.</li>
+<li>It can decode instruction.</li>
+<li>It can calculate effective addresses.</li>
+<li>It can fetch operands from memory.</li>
+<li>It can execute the instruction.</li>
+<li>It can save the result in a suitable place.</li>  </ul>
+
+<h1><a href="">To get More Information ...</a></h1>
+</div>
+      
+        
+<div id="section4" class="container-fluid bg-secondary  text-white" style="padding:100px 20px;">
+  <h1>Data Representation and Arithmetic Algorithm</h1>
+<ul><li><h2>Booth’s Algorithm</h2></li></ul>
+Booth algorithm gives a procedure for multiplying binary integers in signed 2’s complement representation in efficient way, i.e., less number of additions/subtractions required. It operates on the fact that strings of 0’s in the multiplier require no addition but just shifting and a string of 1’s in the multiplier from bit weight 2<sup>k</sup> to weight 2<sup>m</sup> can be treated as 2<sup>(k+1 )</sup> to 2<sup>m</sup>. As in all multiplication schemes, booth algorithm requires examination of the multiplier bits and shifting of the partial product. Prior to the shifting, the multiplicand may be added to the partial product, subtracted from the partial product, or left unchanged according to following rules:
+<br>
+1. The multiplicand is subtracted from the partial product upon encountering the first least significant 1 in a string of 1’s in the multiplier
+<br>2. The multiplicand is added to the partial product upon encountering the first 0 (provided that there was a previous ‘1’) in a string of 0’s in the multiplier.
+<br>3. The partial product does not change when the multiplier bit is identical to the previous multiplier bit.
+<h2>Restoring Division</h2>
+A division algorithm provides a quotient and a remainder when we divide two number. They are generally of two types slow and fast algorithm.
+
+<h4>Slow algorithm and Fast algorithm</h4>
+Slow division algorithm are restoring, non-restoring, non-performing restoring, SRT algorithm and under fast comes Newton–Raphson and Goldschmidt. In this article, will be performing restoring algorithm for unsigned integer. Restoring term is due to fact that value of register A is restored after each iteration.
+<h4>Algorithm:-</h4>
+<ul><li>Step-1: First the registers are initialized with corresponding values (Q = Dividend, M = Divisor, A = 0, n = number of bits in dividend)</li>
+<li>Step-2: Then the content of register A and Q is shifted left as if they are a single unit</li>
+<li>Step-3: Then content of register M is subtracted from A and result is stored in A</li>
+<li>Step-4: Then the most significant bit of the A is checked if it is 0 the least significant bit of Q is set to 1 otherwise if it is 1 the least significant bit of Q is set to 0 and value of register A is restored i.e the value of A before the subtraction with M</li>
+<li>Step-5: The value of counter n is decremented</li>
+<li>Step-6: If the value of n becomes zero we get of the loop otherwise we repeat from step 2</li>
+<li>Step-7: Finally, the register Q contain the quotient and A contain remainder</li></ul>
+
+<ul><li><h2>IEEE Standard 754 Floating Point Numbers</h2></li></ul>
+The IEEE Standard for Floating-Point Arithmetic (IEEE 754) is a technical standard for floating-point computation which was established in 1985 by the Institute of Electrical and Electronics Engineers (IEEE). The standard addressed many problems found in the diverse floating point implementations that made them difficult to use reliably and reduced their portability. IEEE Standard 754 floating point is the most common representation today for real numbers on computers, including Intel-based PC’s, Macs, and most Unix platforms.
+<br>
+There are several ways to represent floating point number but IEEE 754 is the most efficient in most cases. IEEE 754 has 3 basic components:
+<ol><b><li>The Sign of Mantissa –</li></b>
+This is as simple as the name. 0 represents a positive number while 1 represents a negative number.
+<b><li>The Biased exponent –</li></b>
+The exponent field needs to represent both positive and negative exponents. A bias is added to the actual exponent in order to get the stored exponent.
+<b><li>The Normalised Mantissa –</li></b>
+The mantissa is part of a number in scientific notation or a floating-point number, consisting of its significant digits. Here we have only 2 digits, i.e. O and 1. So a normalised mantissa is one with only one 1 to the left of the decimal.
+</ol>
+<b>Special Values:</b> IEEE has reserved some values that can ambiguity.
+<br>
+<b>Zero –</b><br>
+Zero is a special value denoted with an exponent and mantissa of 0. -0 and +0 are distinct values, though they both are equal.
+<br><b>Denormalised –</b><br>
+If the exponent is all zeros, but the mantissa is not then the value is a denormalized number. This means this number does not have an assumed leading one before the binary point.
+<br><b>Infinity –</b><br>
+The values +infinity and -infinity are denoted with an exponent of all ones and a mantissa of all zeros. The sign bit distinguishes between negative infinity and positive infinity. Operations with infinite values are well defined in IEEE.
+<br><b>Not A Number (NAN) –</b><br>
+The value NAN is used to represent a value that is an error. This is represented when exponent field is all ones with a zero sign bit or a mantissa that it not 1 followed by zeros. This is a special value that might be used to denote a variable that doesn’t yet hold a value.
+
+<h1><a href="">To get More Information ...</a></h1>
+
+</div>
+
+<div id="section5" class="container-fluid bg-success  text-white" style="padding:100px 20px;">
+  <h1>Memory Organization</h1>
+
+  <h1><a href="https://youtu.be/2S4At1yakug?si=5-wTHXDnfz4WL0hu">To get More Information ...</a></h1>
+
+</div>
+
+
+<!-- PCOM -->
+<div id="section6" class="container-fluid bg-warning text-white" style="padding:100px 20px;">
+  <h1>I/O Organization</h1>
+  
+  <ul><li><h2>Input/output systems</h2></li></ul>
+  Input-Output Interface is used as an method which helps in transferring of information between the internal storage devices i.e. memory and the external peripheral device . A peripheral device is that which provide input and output for the computer, it is also called Input-Output devices. For Example: A keyboard and mouse provide Input to the computer are called input devices while a monitor and printer that provide output to the computer are called output devices. Just like the external hard-drives, there is also availability of some peripheral devices which are able to provide both input and output.
+  In micro-computer base system, the only purpose of peripheral devices is just to provide special communication links for the interfacing them with the CPU. To resolve the differences between peripheral devices and CPU, there is a special need for communication links.
+<br>
+<b>The major differences are as follows:</b>
+<br>1. The nature of peripheral devices is electromagnetic and electro-mechanical. The nature of the CPU is electronic. There is a lot of difference in the mode of operation of both peripheral devices and CPU.
+<br>2. There is also a synchronization mechanism because the data transfer rate of peripheral devices are slow than CPU.
+<br>3. In peripheral devices, data code and formats are differ from the format in the CPU and memory.
+<br>4. The operating mode of peripheral devices are different and each may be controlled so as not to disturb the operation of other peripheral devices connected to CPU.
+<br>There is a special need of the additional hardware to resolve the differences between CPU and peripheral devices to supervise and synchronize all input and output devices. 
+<h4>Functions of Input-Output Interface:</h4>
+1. It is used to synchronize the operating speed of CPU with respect to input-output devices.
+<br>2. It selects the input-output device which is appropriate for the interpretation of the input-output signal.
+<br>3. It is capable of providing signals like control and timing signals.
+<br>4. In this data buffering can be possible through data bus.
+<br>5. There are various error detectors.
+<br>6. It converts serial data into parallel data and vice-versa.
+<br>7. It also convert digital data into analog signal and vice-versa.  
+
+<ul><li><h2>Need for I/O Modules:</h2></li></ul>
+1. <b>Connectivity:</b> I/O modules facilitate communication between the CPU and peripheral devices such as keyboards, mice, displays, printers, storage devices, and network interfaces.
+<br>2. <b>Data Transfer:</b> They manage the transfer of data between the CPU and peripherals, ensuring efficient and reliable communication.
+<br>3. <b>Interface Compatibility:</b> I/O modules provide compatibility between the CPU's internal bus structure and the various interfaces used by peripheral devices.
+<br>4. <b>Control:</b> They handle device-specific control signals, status updates, and error detection to ensure proper operation of peripheral devices.
+<ul><li><h2>Functions of I/O Modules:</h2></li></ul>
+
+<br><b>1. Interface with Peripheral Devices:</b> I/O modules provide the necessary interfaces to connect and communicate with different types of peripheral devices.
+<br><b>2. Data Buffering:</b> They often include data buffers to temporarily store data during transfer between the CPU and peripherals, helping to smooth out speed mismatches.
+<br><b>3. Control and Timing:</b> I/O modules manage the timing and sequencing of data transfers, ensuring proper synchronization between the CPU and peripherals.
+<br><b>4. Error Handling:</b> They detect and handle errors that may occur during data transfer, such as communication errors or device malfunctions.
+<br><b>5. Interrupt Handling:</b> I/O modules generate interrupts to signal the CPU when data is ready for transfer or when an error occurs, allowing the CPU to respond promptly.
+<ul><li><h2>Types of Data Transfer Techniques:</h2></li></ul>
+
+<b>1. Programmed I/O:</b>
+<ul>
+<li>In programmed I/O, the CPU directly controls data transfer between the peripheral device and memory.</li>
+<li>The CPU continuously polls the device's status to check if it is ready for data transfer, then initiates the transfer when the device is ready.</li>
+<li>Programmed I/O is simple but inefficient, as it ties up the CPU during data transfer and can lead to significant overhead.</li></ul>
+<b>2. Interrupt-Driven I/O:</b>
+<ul>
+<li>In interrupt-driven I/O, the CPU initiates data transfer and then continues executing other tasks while waiting for the peripheral device to complete the transfer.</li>
+<li>When the device completes the transfer, it generates an interrupt signal to notify the CPU, which then handles the interrupt and resumes processing.</li>
+<li>Interrupt-driven I/O reduces CPU overhead and allows for more efficient multitasking compared to programmed I/O.</li></ul>
+<b>3. Direct Memory Access (DMA):</b>
+<ul>
+<li>DMA allows peripheral devices to transfer data directly to and from memory without CPU intervention, freeing the CPU to perform other tasks.</li>
+<li>A DMA controller manages the data transfer process, including initiating transfers, managing memory addresses, and handling interrupts.</li>
+<li>DMA is particularly useful for high-speed data transfers and large data blocks, as it reduces CPU overhead and improves overall system performance.</li></ul>
+
+<h1><a href="https://youtu.be/2S4At1yakug?si=5-wTHXDnfz4WL0hu">To get More Information ...</a></h1>
+        </div>
+      </div>
+</div>
+
+</body>
+

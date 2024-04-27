@@ -1,0 +1,532 @@
+
+<!-- {% include "permanent.html" %} -->
+<!-- {% block footer %} -->
+<!-- {% load static %} -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Self Study</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            header{
+            height:170px;
+            padding-top:10em;
+            background-color: #283E50;}
+        #SS{
+            position: absolute;
+            height:100px;
+            width: 25%;
+            display: inline-block;
+            top: 10px;
+            left: 20px;
+            background-size: cover;
+        }
+        text{
+            height: 10px;
+            
+            
+            color: rgba(255,255,255,.75);
+            font-family: 'Anonymous Pro', monospace;  
+            background-color: rgb(25,25,25);  
+          }
+          .line-1{
+              position: relative;
+              width: 24em;
+              bottom: 100px ;
+              margin-left:50% ;
+              border-right: 2px solid rgba(255,255,255,.75);
+              font-size: 220%;
+              text-align: center;
+              white-space: nowrap;
+              overflow: hidden;
+              transform: translateY(-50%);    
+          }
+          
+          /* Animation */
+          .anim-typewriter{
+            animation: typewriter 4s steps(44) 1s 1 normal both,
+                       blinkTextCursor 500ms steps(44) infinite normal;
+          }
+          @keyframes typewriter{
+            from{width: 0;}
+            to{width: 18em;}
+          }
+          @keyframes blinkTextCursor{
+            from{border-right-color: rgba(255,255,255,.75);}
+            to{border-right-color: transparent;}
+          }
+
+          @media only screen and(max-width: 1150px) {
+             .logo{
+              width: 500px;
+             }
+          }
+        
+        </style>
+    <header>
+        <text><p class="line-1 anim-typewriter">Todays Learner Tomorrow's Leader!</p></text>
+        <a id="SS" href = "" target="_main">
+        <img class="logo"  src="{%static "image/elf.png" %}"alt=",,,">
+        </a> 
+        
+    </header>
+</head>
+<body id="bg"style="background-image: url('{% static "image/bg.png" %}');background-size:cover">
+<!-- {% block body %}
+{% endblock  %} -->
+
+
+    </html>
+<style>
+    .footer {
+        height:150px;
+        bottom:0;
+        width:100%;
+      background-color: #283E50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    
+    a.button4{
+            display:inline-block;
+            padding:30px 1.2em;
+            margin-top: 70px;
+            margin-left: 25%;
+            border:0.16em solid rgba(255,255,255,0);
+            border-radius:2em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family:'Roboto',sans-serif;
+            font-weight:5000;
+            font-size:30px;
+            color:#FFFFFF;
+            text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+            text-align:center;
+            width: 50%;
+            display: block;
+            transition: all 0.2s;
+}
+.table,td,th{
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  border-collapse: collapse;
+}
+a.button4:hover{
+    border-color: rgba(255,255,255,1);
+}
+@media all and (max-width:30em){
+a.button4{
+display:block;
+margin:0.2em auto;
+}
+}
+
+
+    </style>
+
+
+  <!-- {% endblock  %} -->
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" >
+
+<!-- Navbar -->
+<nav class="navbar sticky-top justify-content-center navbar-expand-sm bg-dark navbar-dark ">
+<br>
+
+
+    <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="#section1">Laplace Transform</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">Inverse Laplace Transform</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Fourier Series</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section4">Complex Variable</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section5">Statistical Techniques</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section6">Probability</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+    <body><u><h1>Laplace Transform</h1></u>
+     
+      
+      The Laplace transform is a mathematical tool which is used to convert the differential equations in time domain into the algebraic equations in the frequency domain or s-domain.
+      <br>
+      Mathematically, if x(t)
+       is a time domain function, then its Laplace transform is defined as −
+      <br>
+      <ul><li><b>L[x(t)]=X(s)=∫<sup>∞</sup><sub>−∞</sub>x(t)e<sup>−stdt</sup>...(1)</b></li></ul>
+      
+      Where, 𝑠 is a complex variable and it is given by,
+      <br>
+      <ul><li><b>s=σ+jω</b></li></ul>
+      And the operator L is called the Laplace transform operator which transforms the time domain function into the s-domain function.
+      <br>
+      Since a linear time invariant (LTI) system is described by differential equations and the response of the system for a given input is obtained by solving the differential equations relating its input and output. But the solution of higher order differential equations is very tedious and time consuming, so the Laplace transform is used to solve these differential equations. The Laplace transform converts the time domain differential equations into the algebraic equations in s-domain, get the solution in s-domain and then the solution in time domain can be obtained by the taking inverse Laplace transform of the solution.
+      
+      <h2>Conditions for Existence of Laplace Transform</h2>
+      The Laplace transform of a function <b>x(t)</b>
+      , i.e., function <b>X(s)</b>
+       exists only if
+      
+      <ul><li><b>∫<sup>∞</sup><sub>−∞</sub>∣x(t)e<sup>−σt</sup>∣dt<∞ 
+      </ul></li></b>
+      Or, only if,
+      <br>
+      <ul><li><b>lim<sub>t→∞</sub>x(t)e<sup>−st</sup>=0</b></li></ul>
+      Therefore, the necessary and sufficient conditions for the existence of the Laplace transform are −
+      <ul>
+      <li>The function <b>x(t)</b>
+       should be piece-wise continuous in the given closed interval and must be of exponential order.</li>
+      
+      <li>The function <b>x(t)e<sup>−st</sup></b>
+       should be absolutely integrable</li></ul>
+      
+      <h2>Region of Convergence of Laplace Transform</h2>
+      The region of convergence (ROC) is defined as the set of points in the s-plane for which the Laplace transform of function <b>x(t)</b>
+       (i.e., the function <b>X(s)</b>
+      ) converges.
+      <br>
+      <b>Explanation –</b> For a given function <b>x(t)</b>
+      , the Laplace transform as given by the equation (1) may not converge for all values of the complex variable s. Since every value of the variable (𝑠) corresponds to a particular point in the s-plane. If there is no value corresponding to the variable (𝑠), i.e., no point on the splane for which the Laplace integral converges. Then, the function <b>x(t)</b>
+       does not have a region of convergence (ROC) and hence it is not Laplace transformable.
+
+       <h4>Properties of Region of Convergence of Laplace Transform</h4>
+Following are the properties of the ROC of Laplace transform −
+<ul>
+<li>The ROC of Laplace transform does not contain any poles.</li>
+
+<li>The ROC of the Laplace transform of <b>x(t)</b>
+, i.e., function <b>X(s)</b>
+ is bounded by poles or extends up to infinity.</li>
+
+<li>The ROC of the sum of two or more signals is equal to the intersection of the ROCs of those signals.</li>
+
+<li>The ROC of Laplace transform must be a connected region.</li>
+
+<li>If the function <b>x(t)</b>
+ is a right-sided function, then the ROC of <b>X(s)</b>
+ extends to the right of the right most pole and no-pole is located inside the ROC.</li>
+
+<li>If the signal <b>x(t)</b>
+ is a left-sided signal, then the ROC of Laplace transform <b>X(s)</b>
+ extends to the left of the left most pole and no pole is located inside the ROC.
+</li>
+<li>If the signal <b>x(t)</b>
+ is a two-sided signal, then the ROC of the Laplace transform <b>X(s)</b>
+ is a strip in the s-plane bounded by the poles and nopole is located inside the ROC.
+</li>
+<li>The impulse signal is the only signal for which the ROC is the entire splane.</li>
+
+<li>The imaginary axis of the s-plane is contained by the ROC of a stable LTI system.</li></ul>
+<h2>Laplace Transform of Standard Functions:</h2>
+Exponential function: The Laplace transform of an exponential function 
+e <sup>at</sup>
+  is used to transform functions that grow or decay exponentially over time. It's particularly useful in solving differential equations where exponential growth or decay is involved.
+
+Sine and Cosine functions: The Laplace transform of sine and cosine functions 
+sin(at) and 
+cos
+⁡
+(
+
+
+)
+cos(at)) are utilized when dealing with oscillatory behavior in systems, such as in mechanical vibrations or alternating current circuits.
+
+Hyperbolic Sine and Cosine functions: Similar to sine and cosine functions, the hyperbolic sine and cosine functions (
+sinh
+⁡
+(
+
+)
+sinh(at) and 
+cosh
+⁡
+(
+
+)
+cosh(at)) are used in solving problems involving hyperbolic functions, which arise in areas such as physics and engineering.
+
+Power function: The Laplace transform of 
+
+t 
+n
+ , where 
+
+n is a non-negative integer, helps in solving problems involving polynomial functions of time, which are common in many branches of science and engineering.
+
+<h2>Properties of Laplace Transform:</h2>
+Linearity: The Laplace transform is a linear operator, meaning it satisfies the properties of additivity and homogeneity. This property allows us to break down complex functions into simpler parts and analyze them separately.
+<br>
+First Shifting Theorem: This theorem allows us to shift a function in the time domain by a constant 
+
+a to the right, effectively multiplying it by 
+
+e 
+at
+  in the Laplace domain.
+<br>
+Second Shifting Theorem: Similar to the first shifting theorem, the second shifting theorem allows us to shift a function in the time domain by a constant 
+
+a and multiply it by the unit step function 
+(
+
+−
+
+)
+u(t−a) before taking the Laplace transform.
+<br>
+Change of Scale Property: This property helps in scaling functions in the time domain by a constant factor 
+
+a, effectively stretching or compressing the function, and then taking the Laplace transform.
+
+Multiplication by 
+
+t: Multiplying a function by 
+
+t in the time domain corresponds to differentiation with respect to 
+
+s in the Laplace domain.
+<br>
+Division by 
+
+t: Dividing a function by 
+
+t in the time domain corresponds to integration with respect to 
+
+s in the Laplace domain.
+<br>
+Laplace Transform of Derivatives: The Laplace transform of a derivative of a function involves a simple algebraic manipulation in the Laplace domain.
+<br>
+Laplace Transform of Integrals: Similarly, the Laplace transform of an integral of a function also involves a simple algebraic manipulation in the Laplace domain.
+<br>
+<h2>Evaluation of Real Integrals using Laplace Transformation:</h2>
+Laplace transformation provides a powerful tool for solving differential equations and analyzing systems in engineering and physics. When dealing with real integrals, Laplace transformation allows us to transform the integral into the Laplace domain, where it can often be simplified using algebraic manipulations or properties. After simplification, we can transform it back into the time domain to obtain the solution to the original integral. This method is particularly useful for solving differential equations with initial conditions and boundary conditions. It provides a systematic approach to solve complex problems and obtain analytical solutions.
+
+  <h1><a href="https://www.youtube.com/watch?v=vELXJPaddpI&list=PLKS7ZMKnbPrT8kiya7QCDixR3QdhYz-B3">To get More Information ...</a></h1>
+  </div>
+
+  <div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+  <u><h1>Inverse Laplace Transform</h1></u>
+  <h2>Linearity Property:</h2>
+  The Linearity Property of the Inverse Laplace Transform states that the inverse transform of a linear combination of functions is equal to the linear combination of their individual inverse transforms. 
+
+  <h2>Standard Formulae:</h2>
+  Standard formulae are pre-defined rules or equations used to find the inverse Laplace transform of common functions. These formulae include the inverse transforms of exponential functions, trigonometric functions, hyperbolic functions, and other standard functions. They provide a convenient way to find the time-domain representation of functions without having to perform complex integration.
+  
+  <h2>Inverse Laplace Transform using Derivatives:</h2>
+  Sometimes, the inverse Laplace transform can be found by taking derivatives in the Laplace domain. This method is particularly useful when the Laplace transform of a function is expressed as a product involving 
+  
+  s and 
+  
+  F(s), where 
+  
+  F(s) is known. By taking derivatives with respect to 
+  
+  s, we can isolate 
+  
+  F(s) and then use standard formulae or other methods to find the inverse Laplace transform.
+  
+ <h2> Partial Fractions Method:</h2>
+  The Partial Fractions Method is a technique used to decompose a rational function in the Laplace domain into simpler fractions. This method is often used when the Laplace transform involves a rational function with factors that can be factored into linear or quadratic terms. By decomposing the rational function into partial fractions, we can find the inverse Laplace transform of each term separately using standard formulae or other methods.
+  
+  <h2>Inverse Laplace Transform using Convolution Theorem:</h2>
+  The Convolution Theorem states that the Laplace transform of the convolution of two functions is equal to the product of their individual Laplace transforms. Inverse Laplace transform using Convolution Theorem involves taking the convolution of two functions in the Laplace domain and then finding the inverse Laplace transform of the resulting function. This method is particularly useful in solving integral equations and differential equations involving convolution operations.
+  
+  These methods provide a systematic approach to finding the inverse Laplace transform of functions, allowing us to transform functions from the Laplace domain back to the time domain and obtain their time-domain representations.
+
+  <h1><a href="https://www.youtube.com/watch?v=9cDLc82bexM&list=PLKS7ZMKnbPrQDOTrKMxawIXENqhLWWvgT">To get More Information ...</a></h1>
+</div>
+
+<div id="section3" class="container-fluid bg-info  text-white" style="padding:100px 20px;">
+ <u><h1>Fourier Series</h1></u>
+
+<h2> Dirichlet’s Conditions:</h2>
+ 
+ Dirichlet’s conditions are a set of mathematical criteria that must be satisfied by a periodic function in order for its Fourier series to exist and converge. These conditions are essential for ensuring that the Fourier series representation accurately captures the behavior of the periodic function. The conditions are as follows:
+ <br>
+ 1. Periodicity: The function must be periodic, meaning it repeats itself over regular intervals.
+ <br>
+ 2. Finite Number of Discontinuities: The function can only have a finite number of discontinuities within one period.
+ <br>
+ 3. Finite Number of Maxima and Minima: The function can only have a finite number of maxima and minima within one period.
+ <br>
+ 4. Integrability: The function must be Lebesgue integrable over one period, meaning its integral exists and is finite.
+ <br>
+ These conditions ensure that the Fourier series representation of the function converges to the function itself within its period.
+ 
+ <h2>Definition of Fourier Series:</h2>
+ 
+ The Fourier series of a periodic function is a representation of that function as an infinite sum of sine and cosine functions (or complex exponentials). It allows us to express a periodic function in terms of its frequency components. Mathematically, if \( f(x) \) is a periodic function with period \( 2\pi \) (or \( 2L \)), its Fourier series is given by:
+ 
+ <h2>Parseval’s Identity:</h2>
+ 
+ Parseval’s Identity relates the energy or power of a function in the time domain to its frequency-domain representation through the Fourier series. It states that the sum of the squares of the Fourier coefficients is equal to the integral of the square of the function over one period. In other words, it quantifies the conservation of energy between the time and frequency domains.
+ 
+ 
+ <h2> Fourier Series of Even and Odd Functions:</h2>
+ 
+ For even functions, their Fourier series consists of only cosine terms, while for odd functions, their Fourier series consists of only sine terms. This is because even functions are symmetric about the y-axis, and odd functions are symmetric about the origin. As a result, the cosine terms capture the even symmetry, while the sine terms capture the odd symmetry.
+ 
+ <h2> Half-Range Sine and Cosine Series:</h2>
+ 
+ The half-range sine and cosine series represent a function defined only over half of its period, typically from \( 0 \) to \( \pi \) or \( 0 \) to \( L \). These series can be derived by extending the function to be either even or odd over the entire period and then applying the Fourier series representation for even or odd functions. They provide a convenient way to represent functions defined over a restricted range and are often used in solving boundary value problems.
+
+<h1><a href="https://www.youtube.com/watch?v=egJItogAh4g&list=PLKS7ZMKnbPrQHf0tf29cSp4xkLVG5xLWF">To get More Information ...</a></h1>
+</div>
+      
+        
+<div id="section4" class="container-fluid bg-secondary  text-white" style="padding:100px 20px;">
+  <u><h1>Complex Variable</h1></u>
+
+  <h2>Function ( f(z)) of Complex Variable:</h2>
+  
+  A function ( f(z) ) of a complex variable is a function that maps complex numbers to complex numbers. It can be expressed as ( f(z) = u(x, y) + iv(x, y) ), where ( z = x + iy ) is a complex number, ( u(x, y) ) is the real part of ( f(z) ), and ( v(x, y) ) is the imaginary part of ( f(z) ).
+  
+  <h2>Limit, Continuity, and Differentiability of ( f(z) ):</h2>
+  
+  - Limit: The limit of ( f(z) ) as ( z ) approaches a complex number ( z_0 ) is the value that ( f(z) ) approaches as ( z ) gets arbitrarily close to ( z_0 ).
+<br>  - Continuity: ( f(z) ) is continuous at a point ( z_0 ) if the limit of ( f(z) ) exists as ( z ) approaches ( z_0 ) and is equal to ( f(z_0) ).
+<br>  - Differentiability: ( f(z) ) is said to be differentiable at a point ( z_0 ) if its derivative exists at ( z_0 ). This means that the limit of the difference quotient ( frac{f(z) - f(z_0)}{z - z_0} ) exists as ( z ) approaches ( z_0 ).
+  
+  <h2>Analytic Function:</h2>
+  
+  An analytic function is a complex function that is differentiable at every point within some region in the complex plane. In other words, it is a function that can be represented by a convergent power series in some neighborhood of every point in its domain.
+  
+  <h2> Necessary and Sufficient Conditions for ( f(z) ) to be Analytic:</h2>
+  
+  The necessary and sufficient conditions for a function ( f(z) = u(x, y) + iv(x, y) ) to be analytic are given by the Cauchy-Riemann equations. These equations state that if ( u(x, y) ) and ( v(x, y) ) have continuous first partial derivatives.
+
+  <h2>Cauchy-Riemann Equations in Cartesian Coordinates:</h2>
+  
+  The Cauchy-Riemann equations relate the real and imaginary parts of an analytic function. In Cartesian coordinates, they are given by the two partial differential equations mentioned earlier. These equations ensure that the function is differentiable and hence analytic within a region.
+  
+  <h2>Milne-Thomson Method:</h2>
+  
+  The Milne-Thomson method is a technique used to determine an analytic function ( f(z) ) when either its real part ( u(x, y) ), imaginary part ( v(x, y) ), or a combination of both ( u + iv ) or ( u - iv ) is given. This method involves solving the Cauchy-Riemann equations to find the corresponding function.
+  
+  <h2>Harmonic Function, Harmonic Conjugate, and Orthogonal Trajectories:</h2>
+  
+  - Harmonic Function: A harmonic function ( u(x, y) ) is a real-valued function that satisfies Laplace's equation . It describes a function whose Laplacian is zero, meaning its second partial derivatives with respect to both ( x ) and ( y ) vanish.
+  <br>- Harmonic Conjugate: Given a harmonic function ( u(x, y) ), its harmonic conjugate ( v(x, y) ) is another harmonic function such that ( u + iv ) forms an analytic function. The existence of a harmonic conjugate is guaranteed under certain conditions.
+  <br>- Orthogonal Trajectories: In the context of harmonic functions, orthogonal trajectories are curves that intersect the level curves of a harmonic function at right angles. These trajectories represent the paths along which the harmonic function changes most rapidly. They provide important insights into the behavior of harmonic functions and their applications in various fields.
+
+<h1><a href="https://www.youtube.com/watch?v=IMIwvd0UGjM&list=PLKS7ZMKnbPrTe_ayBsypP_36cH34NOylM">To get More Information ...</a></h1>
+
+</div>
+
+<div id="section5" class="container-fluid bg-success  text-white" style="padding:100px 20px;">
+  <u><h1> Statistical Techniques
+  </h1></u>
+  
+  <h2> Karl Pearson’s Coefficient of Correlation ((r)):</h2>
+  
+  Karl Pearson’s coefficient of correlation, denoted by (r), measures the strength and direction of the linear relationship between two variables. It quantifies how closely the data points in a scatter plot cluster around a straight line. 
+  <br>
+  - Strength of Correlation: The value of (r) ranges from -1 to 1. A value of 1 indicates a perfect positive linear correlation, -1 indicates a perfect negative linear correlation, and 0 indicates no linear correlation.
+    <br>
+  - Direction of Correlation: If (r) is positive, it indicates a positive linear relationship, meaning that as one variable increases, the other variable tends to increase as well. If (r) is negative, it indicates a negative linear relationship, meaning that as one variable increases, the other variable tends to decrease.
+  
+  <h2> Spearman’s Rank Correlation Coefficient ((R)):</h2>
+  
+  Spearman’s rank correlation coefficient, denoted by (R), is a non-parametric measure of the strength and direction of the monotonic relationship between two variables. Unlike Pearson’s (r), Spearman’s (R) does not assume that the relationship between variables is linear.
+  <br>
+  - Repeated Ranks: When there are repeated ranks in the data, Spearman’s (R) adjusts for ties by using a correction factor. It accounts for situations where multiple observations have the same rank.
+  <br>
+  - Non-Repeated Ranks: In cases where there are no repeated ranks, Spearman’s (R) is calculated directly from the ranks assigned to the data points.
+  
+  <h2>Lines of Regression:</h2>
+  
+  Lines of regression are lines that represent the best-fit relationship between two variables in a scatter plot. They are used to predict the value of one variable based on the value of another variable. 
+  <br>
+  - Regression Line: The regression line for predicting (y) from (x) (or vice versa) is determined by minimizing the sum of the squares of the vertical distances between the observed data points and the line. This line passes through the mean of the (x) and (y) variables.
+<br>  
+  - Lines of Best Fit: There are two lines of regression: one for predicting (y) from (x) (called the regression line of (y) on (x), and the other for predicting (x) from (y) (called the regression line of (x) on (y). These lines may not necessarily be the same unless the correlation between the two variables is perfect ((r = pm 1)).
+  
+  <h2>Fitting of First and Second Degree Curves:</h2>
+  
+  In cases where the relationship between variables is nonlinear, first and second-degree curves can be fitted to the data points to capture the underlying trend. These curves provide a better fit than straight lines when the relationship is not strictly linear.
+  <br>
+  - First Degree Curve: A first-degree curve is a linear curve (straight line) that represents the best-fit relationship between two variables. It is of the form (y = mx + c), where (m) is the slope and (c) is the intercept.
+  <br>
+  - Second Degree Curve: A second-degree curve is a quadratic curve that represents the best-fit relationship between two variables. It is of the form (y = ax^2 + bx + c), where (a), (b), and (c) are constants. This curve can capture more complex relationships than a straight line and may exhibit concavity or convexity.  
+  
+  <h1><a href="https://www.youtube.com/watch?v=7p4FSDCRJHQ&pp=ygU6c2VtIDMgbWF0aGVtYXRpY3Mgc2F1cmFiaCBkYWhpdmFka2FyIHNhdGlzdGljYWwgdGVjaG5pcXVlcw%3D%3D">To get More Information ...</a></h1>
+</div>
+
+
+
+<div id="section6" class="container-fluid bg-warning text-white" style="padding:100px 20px;">
+  <u><h1>Probability</h1></u>
+  
+  <h2> Definition and Basics of Probability:</h2>
+  
+  Probability is a measure of the likelihood of an event occurring. It quantifies uncertainty and is expressed as a value between 0 and 1, where 0 indicates impossibility and 1 indicates certainty. The basics of probability include:
+  <br>
+  - Sample Space: The set of all possible outcomes of an experiment.
+    <br>
+  - Event: A subset of the sample space, consisting of one or more outcomes.
+  
+ 
+  <h2>Discrete and Continuous Random Variables:</h2>
+  
+  - Discrete Random Variable: A discrete random variable can take on a countable number of distinct values. Examples include the number of heads obtained in multiple coin tosses or the number of cars passing through an intersection in a given time period.
+  <br>
+  - Continuous Random Variable: A continuous random variable can take on any value within a range. It is associated with measurements and observations that can take infinitely many values within an interval. Examples include height, weight, and temperature.
+  
+  <h2>Probability Distribution and Probability Density Function:</h2>
+  
+  - Probability Distribution: Describes the likelihood of each possible outcome of a random variable. For discrete random variables, it is often represented as a probability mass function (PMF). For continuous random variables, it is represented as a probability density function (PDF).
+<br>  
+  - Probability Density Function (PDF): For continuous random variables, the probability density function represents the probability of a random variable falling within a particular interval. It is non-negative and integrates to 1 over the entire range of possible values.
+  
+  <h2>Expectation of Random Variables:</h2>
+  
+  The expectation (or mean) of a random variable represents the average value it takes on over many repetitions of an experiment. It is a measure of central tendency and is calculated as the weighted sum of the possible values of the random variable, where the weights are given by their respective probabilities.
+  
+  <h2> Mean, Variance, and Standard Deviation:</h2>
+  
+  - Mean: Represents the average value of a random variable. It is denoted by ( mu) .
+  <br>
+  - Variance: Measures the spread or dispersion of a random variable's values around its mean. It is denoted by ( sigma<sup>2</sup> ) for the population and ( s<sup>2</sup> ) for a sample.
+  <br>
+  - Standard Deviation: Represents the square root of the variance and provides a measure of the average deviation of each data point from the mean. It is denoted by ( sigma ) for the population and ( s ) for a sample.
+  
+  <h2>Moment Generating Function (MGF):</h2>
+  
+  The moment generating function of a random variable provides a convenient way to derive moments (mean, variance, skewness, etc.) of the distribution. It is a function that uniquely determines the probability distribution of the random variable. By evaluating the moment generating function at certain values, moments of the distribution can be obtained.
+
+  <h1><a href="https://www.youtube.com/watch?v=OdWPaHTzISY&list=PLKS7ZMKnbPrRUzxQuteRWEuBEkSW0_-3b">To get More Information ...</a></h1>
+        </div>
+      </div>
+</div>
+
+</body>
+<footer class="footer">
+  <p>&copy; Self Study Reserved Rights 2024</p>
+  
+  </ul>
+</div>
+</footer>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

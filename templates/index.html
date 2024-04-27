@@ -1,0 +1,30 @@
+{% load static %}
+{% include "permanent.html" %} 
+
+    {% block body %}
+    
+        
+<a href="se3" class="button4" style="background-color:#d9f14e">Semester 3</a> 
+<a href="se4" class="button4" style="background-color:#f14e4e">Semester 4</a>
+    
+<br><br><br><br>
+<div style="background-image: url('{% static "image/div.png" %}');background-size:cover">
+    <br><br>
+    
+    <form action='cookie' method="POST">{%csrf_token%}
+<br><br><br><br>        
+            <label class="form-label"></label>
+            <input type="text" class="form-control" placeholder="Enter Your Name" name="Name">
+          <label class="form-label"></label>
+          <input type="Email" class="form-control"placeholder="Email Address" name="Email">
+            <label class="form-label"></label>
+            <input type="number" class="form-control" placeholder="Phone"name="Phone">
+        <br><br>
+        <button type="submit"  btn-align="center"class="btn btn-warning">Submit</button>
+      </form>
+</div>
+
+<br><br><br><br>
+</body>
+{% endblock  %}
+{% include "footer.html" %}

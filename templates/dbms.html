@@ -1,0 +1,862 @@
+
+<!-- {% include "permanent.html" %} -->
+<!-- {% block footer %} -->
+<!-- {% load static %} -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Self Study</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            header{
+            height:170px;
+            padding-top:10em;
+            background-color: #283E50;}
+        #SS{
+            position: absolute;
+            height:100px;
+            width: 25%;
+            display: inline-block;
+            top: 10px;
+            left: 20px;
+            background-size: cover;
+        }
+        text{
+            height: 10px;
+            
+            
+            color: rgba(255,255,255,.75);
+            font-family: 'Anonymous Pro', monospace;  
+            background-color: rgb(25,25,25);  
+          }
+          .line-1{
+              position: relative;
+              width: 24em;
+              bottom: 100px ;
+              margin-left:50% ;
+              border-right: 2px solid rgba(255,255,255,.75);
+              font-size: 220%;
+              text-align: center;
+              white-space: nowrap;
+              overflow: hidden;
+              transform: translateY(-50%);    
+          }
+          
+          /* Animation */
+          .anim-typewriter{
+            animation: typewriter 4s steps(44) 1s 1 normal both,
+                       blinkTextCursor 500ms steps(44) infinite normal;
+          }
+          @keyframes typewriter{
+            from{width: 0;}
+            to{width: 18em;}
+          }
+          @keyframes blinkTextCursor{
+            from{border-right-color: rgba(255,255,255,.75);}
+            to{border-right-color: transparent;}
+          }
+
+          @media only screen and(max-width: 1150px) {
+             .logo{
+              width: 500px;
+             }
+          }
+        
+        </style>
+    <header>
+        <text><p class="line-1 anim-typewriter">Todays Learner Tomorrow's Leader!</p></text>
+        <a id="SS" href = "" target="_main">
+        <img class="logo"  src="{%static "image/elf.png" %}"alt=",,,">
+        </a> 
+        
+    </header>
+</head>
+<body id="bg"style="background-image: url('{% static "image/bg.png" %}');background-size:cover">
+<!-- {% block body %}
+{% endblock  %} -->
+
+
+    </html>
+<style>
+    .footer {
+        height:150px;
+        bottom:0;
+        width:100%;
+      background-color: #283E50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    
+    a.button4{
+            display:inline-block;
+            padding:30px 1.2em;
+            margin-top: 70px;
+            margin-left: 25%;
+            border:0.16em solid rgba(255,255,255,0);
+            border-radius:2em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family:'Roboto',sans-serif;
+            font-weight:5000;
+            font-size:30px;
+            color:#FFFFFF;
+            text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+            text-align:center;
+            width: 50%;
+            display: block;
+            transition: all 0.2s;
+}
+.table,td,th{
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  border-collapse: collapse;
+}
+a.button4:hover{
+    border-color: rgba(255,255,255,1);
+}
+@media all and (max-width:30em){
+a.button4{
+display:block;
+margin:0.2em auto;
+}
+}
+
+
+    </style>
+
+
+  <!-- {% endblock  %} -->
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" >
+
+<!-- Navbar -->
+<nav class="navbar sticky-top justify-content-center navbar-expand-sm bg-dark navbar-dark ">
+<br>
+
+
+    <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="#section1">Database System Concepts and Architecture</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">The Entity Relationship 
+          Model</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Relational Model 
+          & Relational 
+          Algebra</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section4">Structured Query
+          Language (SQL) 
+          & Indexing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section5">Relational 
+          Database Design</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section6">Transactions 
+          Management and 
+          Concurrency and 
+          Recovery</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+    <u><h1>The Entity Relationship 
+      Model</h1></u>
+    <ul><li><h2>Characteristics of Database Approach:-</h2></li></ul>
+    Some of the most important characteristics of the database approach to the file processing approach are the following as follows.
+    <h4>Approach-1 : Self-Describing Nature of a Database System</h4>
+   <ul><li> One of the most fundamental characteristics of the database approach is that the database system contains not only the database itself but also an entire definition or description of the database structure and constraints also known as metadata of the database. </li>
+<li>This definition is stored within the DBMS catalog, which contains information like the structure of every file, the sort and storage format of every data item, and various constraints/rules on the information. </li>
+<li>The knowledge stored within the catalog is named meta-data, and it describes the structure of the first database The catalog is employed by the DBMS software and also by database users such as database administrators who required to know the information about the database structure. </li>
+<li>A general-purpose DBMS software package is not written for a selected database application. Therefore, it must ask the catalog to understand the structure of the files during a specific database, like the sort and format of knowledge it will access. </li>
+<li>The DBMS software must work equally well with any number of database applications, For example, a university database, a banking database, or a corporation database as long as because the database definition is stored within the catalog In traditional file processing, data definition is usually a part of the files. File processing software can access only specific databases, Database Management software can access various databases by extracting the database definitions or schemas from the catalog and using these definitions.</li></ul>
+    <h4>Approach-2 : Insulation between Programs and Data, and Data Abstraction</h4>
+   <ul><li> In a traditional file processing system, the structure of database knowledge files is embedded within the application programs, so any changes to the structure of a file may require changing all programs that access that file. </li>
+    <li>Against this, DBMS access programs don’t require such changes in most cases, so independence is achieved between them. </li>
+    <li>The structure of knowledge files is stored within the DBMS catalog separately from the programs that access them. We call this property program-data independence.</li> 
+<li>    The characteristic that allows program-data independence and program-operation independence is known as data abstraction. </li>
+<li>    A DBMS provides users with a conceptual representation of knowledge that doesn’t include much of the small print of how the information is stored or how the operations are implemented internally. Informally, a knowledge model may be a sort of data abstraction that won’t provide this conceptual representation. </li>
+<li>    The information model uses logical concepts, like objects, their properties, and their relationships between them, which will be easier for many users to know than memory concepts or storage concepts. Hence, the information model hides storage and implementation details that are not of interest to most database users, so unnecessary complications are hidden from them.</li></ul>
+<h4>Approach-3 : Support for Multiple Views of the Data</h4>
+<ul><li>A database sometimes has many users, each of whom may require a special perspective or view of the database. </li>
+<li>A view could also be a subset of the database, or it’s going to contain virtual data that is derived from the database files but isn’t explicitly stored. </li>
+<li>Some users might not get to remember whether the information they ask for is stored or derived. </li>
+<li>A multi-user DBMS whose users have a spread of distinct applications must provide facilities for outlining multiple views. This provides many benefits for large databases such as the Aadhaar database.</li></ul>
+<h4>Approach-4 : Sharing of knowledge and Multi-user Transaction Processing</h4>
+<ul><li>A multi-user DBMS, as its name implies, must allow multiple users to access the database at an equivalent time or concurrently. </li>
+<li>This is often essential if data for multiple applications is to be integrated and maintained during a single database such as the latest feature of WhatsApp integration with Facebook. </li>
+<li>The DBMS must implement concurrency control in the software to make sure that several users trying to update equivalent data do so in a controlled manner in order that the results of the updates are correct. </li>
+<li>For instance, when several reservation agents attempt to assign a seat on an airline flight, the DBMS should make sure that each seat is often accessed by just one user agent at a single time for an assignment to a passenger. </li>
+<li>These sorts of applications are generally called online transaction processing (OLTP) applications. A fundamental role of multi-user DBMS software is to make sure that concurrent transactions operate correctly and efficiently with no inconsistency. </li>
+<li>The concept of a transaction has become central to several database applications. A transaction is an executing program or process that has one or more database accesses, like reading or updating of database records or inserting new records. </li>
+<li>The isolation property ensures that every transaction appears to execute in isolation from other transactions, many transactions could also be executed concurrently without affecting each other. </li>
+<li>The atomicity property ensures that either all the database operations during a transaction are executed or none are, these all ACID properties we know.</li></ul>
+<ul><li><h2>File System VS DBMS</h2></li></ul>
+<table class="table">
+  <tr><th>Basics</th>
+    <th>File System</th>
+    <th>DBMS</th></tr>
+<tr><td>Structure</td>
+  <td>The file system is a way of arranging the files in a storage medium within a computer.</td>
+  <td>DBMS is software for managing the database.</td></tr>
+  <tr>
+    <td>Data Redundancy</td>
+    <td>Redundant data can be present in a file system.</td>
+    <td>In DBMS there is no redundant data.</td></tr>
+    <tr><td>Backup and Recovery</td>
+<td>
+    It doesn’t provide Inbuilt mechanism for backup and recovery of data if it is lost.</td>
+    <td>
+    It provides in house tools for backup and recovery of data even if it is lost.
+    </td></tr>
+    <tr><td>Query processing</td>
+    <td>
+    There is no efficient query processing in the file system.</td>
+<td>    
+    Efficient query processing is there in DBMS.
+   </td></tr> 
+    <tr><td>Consistency</td>
+    <td>
+    There is less data consistency in the file system.
+</td>    
+    <td>There is more data consistency because of the process of normalization.
+    </td></tr>
+    <tr><td>Complexity
+   </td> 
+    <td>It is less complex as compared to DBMS.
+    </td>
+    <td>It has more complexity in handling as compared to the file system.
+    </td></tr>
+    <tr><td>Security Constraints
+    </td>
+    <td>File systems provide less security in comparison to DBMS.
+    </td>
+    <td>DBMS has more security mechanisms as compared to file systems.
+    </td></tr>
+    <tr><td>Cost</td>
+    <td>
+    It is less expensive than DBMS.</td>
+<td>    
+    It has a comparatively higher cost than a file system.
+    </td></tr>
+<tr><td>    Data Independence</td>
+    <td>
+    There is no data independence.
+    </td>
+<td>    In DBMS data independence exists, mainly of two types:<br>
+    
+    1) Logical Data Independence.<br>
+    
+    2)Physical Data Independence.</td></tr>
+    
+<tr><td>    Example</td>
+    
+ <td>   Cobol, C++
+   </td> 
+   <td> Oracle, SQL Server</td></tr>
+</table>
+<ul><li><h2>Data Abstraction and Data Independence</h2></li></ul>
+  Database systems comprise complex data structures. In order to make the system efficient in terms of retrieval of data, and reduce complexity in terms of usability of users, developers use abstraction i.e. hide irrelevant details from the users. This approach simplifies database design. 
+  
+  <h4>Level of Abstraction in a DBMS</h4>
+  <h5>There are mainly 3 levels of data abstraction:</h5> 
+<ol>  
+  <li>Physical or Internal Level</li>
+<li>  Logical or Conceptual Level</li>
+  <li>View or External Level</li></ol>
+  <ol><b><li>Physical or Internal Level</li></b><br>
+  This is the lowest level of data abstraction. It tells us how the data is actually stored in memory. Access methods like sequential or random access and file organization methods like B+ trees and hashing are used for the same. Usability, size of memory, and the number of times the records are factors that we need to know while designing the database. 
+  Suppose we need to store the details of an employee. Blocks of storage and the amount of memory used for these purposes are kept hidden from the user. 
+  <br>
+  <b><li>Logical or Conceptual Level</li></b><br>
+  This level comprises the information that is actually stored in the database in the form of tables. It also stores the relationship among the data entities in relatively simple structures. At this level, the information available to the user at the view level is unknown. 
+  We can store the various attributes of an employee and relationships, e.g. with the manager can also be stored. 
+  
+  The logical level thus describes the entire database in terms of a small number of relatively simple structures. Although implementation of the simple structures at the logical level may involve complex physical-level structures, the user of the logical level does not need to be aware of this complexity. This is referred to as physical data independence. Database administrators, who must decide what information to keep in the database, use the logical level of abstraction.
+  <br>
+  <b><li>View or External Level</li></b><br>
+  This is the highest level of abstraction. Only a part of the actual database is viewed by the users. This level exists to ease the accessibility of the database by an individual user. Users view data in the form of rows and columns. Tables and relations are used to store data. Multiple views of the same database may exist. Users can just view the data and interact with the database, storage and implementation details are hidden from them. Even though the logical level uses simpler structures, complexity remains because of the variety of information stored in a large database. Many users of the database system do not need all this information; instead, they need to access only a part of the database. The view level of abstraction exists to simplify their interaction with the system</ol>
+  <h4>Data Independence</h4>
+  Data Independence is mainly defined as a property of DBMS that helps you to change the database schema at one level of a system without requiring to change the schema at the next level. it helps to keep the data separated from all program that makes use of it.
+  We have namely two levels of data independence arising from these levels of abstraction: 
+  <br><ol>
+  <li>Physical level data independence</li>
+  <li>Logical level data independence</li></ol>
+ <ol><b><li> Physical Level Data Independence</li></b>
+  It refers to the characteristic of being able to modify the physical schema without any alterations to the conceptual or logical schema, done for optimization purposes, e.g., the Conceptual structure of the database would not be affected by any change in storage size of the database system server. Changing from sequential to random access files is one such example. These alterations or modifications to the physical structure may include: 
+  <br>
+  <ul><li>Utilizing new storage devices.</li>
+ <li> Modifying data structures used for storage.</li>
+  <li>Altering indexes or using alternative file organization techniques etc.</li></ul>
+  <b><li>Logical Level Data Independence</li></b>
+  It refers characteristic of being able to modify the logical schema without affecting the external schema or application program. The user view of the data would not be affected by any changes to the conceptual view of the data. These changes may include insertion or deletion of attributes, altering table structures entities or relationships to the logical schema, etc.</ol>
+  <ul><li><h2>Database Administrator (DBA)</h2></li></ul>
+  A Database Administrator (DBA) is an individual or person responsible for controlling, maintaining, coordinating, and operating a database management system. Managing, securing, and taking care of the database systems is a prime responsibility. They are responsible and in charge of authorizing access to the database, coordinating, capacity, planning, installation, and monitoring uses, and acquiring and gathering software and hardware resources as and when needed. Their role also varies from configuration, database design, migration, security, troubleshooting, backup, and data recovery. Database administration is a major and key function in any firm or organization that is relying on one or more databases. They are overall commanders of the Database system.
+<br>
+  <h4>Types of Database Administrator (DBA) :</h4>
+  <ul><b><li>Administrative DBA – </li></b>
+  Their job is to maintain the server and keep it functional. They are concerned with data backups, security, troubleshooting, replication, migration, etc.
+  <b><li>Data Warehouse DBA – </li></b>
+  Assigned earlier roles, but held accountable for merging data from various sources into the data warehouse. They also design the warehouse, with cleaning and scrubs data prior to loading.
+  <b><li>Cloud DBA –</li></b> 
+  Nowadays companies are preferring to save their workpiece on cloud storage.  As it reduces the chance of data loss and provides an extra layer of data security and integrity.
+  <b><li>Development DBA –</li></b> 
+  They build and develop queries, stores procedure, etc. that meets firm or organization needs. They are par at programming.
+  <b><li>Application DBA – </li></b>
+  They particularly manage all requirements of application components that interact with the database and accomplish activities such as application installation and coordination, application upgrades, database cloning, data load process management, etc.
+  <b><li>Architect –</li></b> 
+  They are held responsible for designing schemas like building tables. They work to build a structure that meets organizational needs. The design is further used by developers and development DBAs to design and implement real applications.
+  <b><li>OLAP DBA – </li></b>
+  They design and build multi-dimensional cubes for determination support or OLAP systems.
+  <b><li>Data Modeler –</li></b>
+  In general, a data modeler is in charge of a portion of a data architect’s duties. A data modeler is typically not regarded as a DBA, but this is not a hard and fast rule.
+  <b><li>Task-Oriented DBA –</li></b>
+  To concentrate on a specific DBA task, large businesses may hire highly specialised DBAs. They are quite uncommon outside of big corporations. Recovery and backup DBA, whose responsibility it is to guarantee that the databases of businesses can be recovered, is an example of a task-oriented DBA. However, this specialism is not present in the majority of firms. These task-oriented DBAs will make sure that highly qualified professionals are working on crucial DBA tasks when it is possible.
+  <b><li>Database Analyst –</li></b>
+  This position doesn’t actually have a set definition. Junior DBAs may occasionally be referred to as database analysts. A database analyst occasionally performs functions that are comparable to those of a database architect. The term “Data Administrator” is also used to describe database analysts and data analysts. Additionally, some businesses occasionally refer to database administrators as data analysts.
+  <h4>Types of Database Administrator (DBA) :</h4>
+<b><li>Administrative DBA – </li></b>
+Their job is to maintain the server and keep it functional. They are concerned with data backups, security, troubleshooting, replication, migration, etc.
+<b><li>Data Warehouse DBA – </li></b>
+Assigned earlier roles, but held accountable for merging data from various sources into the data warehouse. They also design the warehouse, with cleaning and scrubs data prior to loading.
+<b><li>Cloud DBA –</li></b> 
+Nowadays companies are preferring to save their workpiece on cloud storage.  As it reduces the chance of data loss and provides an extra layer of data security and integrity.
+<b><li>Development DBA –</li></b> 
+They build and develop queries, stores procedure, etc. that meets firm or organization needs. They are par at programming.
+<b><li>Application DBA –</li></b> 
+They particularly manage all requirements of application components that interact with the database and accomplish activities such as application installation and coordination, application upgrades, database cloning, data load process management, etc.
+<b><li>Architect – </li></b>
+They are held responsible for designing schemas like building tables. They work to build a structure that meets organizational needs. The design is further used by developers and development DBAs to design and implement real applications.
+<b><li>OLAP DBA –</li></b> 
+They design and build multi-dimensional cubes for determination support or OLAP systems.
+<b><li>Data Modeler –</li></b>
+In general, a data modeler is in charge of a portion of a data architect’s duties. A data modeler is typically not regarded as a DBA, but this is not a hard and fast rule.
+<b><li>Task-Oriented DBA –</li></b>
+To concentrate on a specific DBA task, large businesses may hire highly specialised DBAs. They are quite uncommon outside of big corporations. Recovery and backup DBA, whose responsibility it is to guarantee that the databases of businesses can be recovered, is an example of a task-oriented DBA. However, this specialism is not present in the majority of firms. These task-oriented DBAs will make sure that highly qualified professionals are working on crucial DBA tasks when it is possible.
+<b><li>Database Analyst –</li></b>
+This position doesn’t actually have a set definition. Junior DBAs may occasionally be referred to as database analysts. A database analyst occasionally performs functions that are comparable to those of a database architect. The term “Data Administrator” is also used to describe database analysts and data analysts. Additionally, some businesses occasionally refer to database administrators as data analysts.
+<h4>Role and Duties of Database Administrator (DBA) :</h4>
+<b><li>Decides hardware –</li></b> 
+They decide on economical hardware, based on cost, performance, and efficiency of hardware, and best suits the organization. It is hardware that is an interface between end users and the database.
+<b><li>Manages data integrity and security –</li></b> 
+Data integrity needs to be checked and managed accurately as it protects and restricts data from unauthorized use. DBA eyes on relationships within data to maintain data integrity.
+<b><li>Database Accessibility –</li></b>  
+Database Administrator is solely responsible for giving permission to access data available in the database. It also makes sure who has the right to change the content.
+<b><li>Database design –</li></b> 
+DBA is held responsible and accountable for logical, physical design, external model design, and integrity and security control.
+<b><li>Database implementation –</li></b> 
+DBA implements DBMS and checks database loading at the time of its implementation.
+<b><li>Query processing performance –</li></b> 
+DBA enhances query processing by improving speed, performance, and accuracy.
+<b><li>Tuning Database Performance –</li></b> 
+If the user is not able to get data speedily and accurately then it may lose organization’s business. So by tuning SQL commands DBA can enhance the performance of the database.
+</ul>  
+  <h1><a href="https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y">To get More Information ...</a></h1>
+  </div>
+
+  <div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+  <u><h1>The Entity Relationship Model</h1></u>
+ <ul><li><h2>Conceptual Data Model</h2></li></ul>
+ The conceptual data model describes the database at a very high level and is useful to understand the needs or requirements of the database. It is this model, that is used in the requirement-gathering process i.e. before the Database Designers start making a particular database. One such popular model is the entity/relationship model (ER model). The E/R model specializes in entities, relationships, and even attributes that are used by database designers. In terms of this concept, a discussion can be made even with non-computer science(non-technical) users and stakeholders, and their requirements can be understood.
+ <h4>Characteristics of a conceptual data model</h4>
+<ul><li> Offers Organization-wide coverage of the business concepts.</li>
+<li> This type of Data Models are designed and developed for a business audience.</li>
+ <li>The conceptual model is developed independently of hardware specifications like data storage capacity, location or software specifications like DBMS vendor and technology. The focus is to represent data as a user will see it in the “real world.”</li></ul>
+
+ <ul><li><h2>ER Model</h2></li></ul>
+<p> The Entity Relational Model is a model for identifying entities to be represented in the database and representation of how those entities are related. The ER data model specifies enterprise schema that represents the overall logical structure of a database graphically. 
+The Entity Relationship Diagram explains the relationship among the entities present in the database. ER models are used to model real-world objects like a person, a car, or a company and the relation between these real-world objects. In short, the ER Diagram is the structural format of the database. </p>
+<h4>Symbols Used in ER Model</h4>
+ER Model is used to model the logical view of the system from a data perspective which consists of these symbols:
+<ul>
+<li>Rectangles: Rectangles represent Entities in the ER Model.</li>
+<li>Ellipses: Ellipses represent Attributes in the ER Model.</li>
+<li>Diamond: Diamonds represent Relationships among Entities.</li>
+<li>Lines: Lines represent attributes to entities and entity sets with other relationship types</li>
+<li>Double Ellipse: Double Ellipses represent Multi-Valued Attributes.</li>
+<li>Double Rectangle: Double Rectangle represents a Weak Entity</li></ul>
+<h4>Components of ER Diagram</h4>
+ER Model consists of Entities, Attributes, and Relationships among Entities in a Database System.
+<h5>Entity</h5>
+An Entity may be an object with a physical existence – a particular person, car, house, or employee – or it may be an object with a conceptual existence – a company, a job, or a university course. 
+<br><b>1. Strong Entity</b>
+<br>A Strong Entity is a type of entity that has a key Attribute. Strong Entity does not depend on other Entity in the Schema. It has a primary key, that helps in identifying it uniquely, and it is represented by a rectangle. These are called Strong Entity.
+
+<br><b>2. Weak Entity</b>
+<br>An Entity type has a key attribute that uniquely identifies each entity in the entity set. But some entity type exists for which key attributes can’t be defined. These are called Weak Entity. 
+<h5>Attributes</h5>
+Attributes are the properties that define the entity type. For example, Roll_No, Name, DOB, Age, Address, and Mobile_No are the attributes that define entity type Student. In ER diagram, the attribute is represented by an oval. 
+<b>1. Key Attribute</b><br>
+The attribute which uniquely identifies each entity in the entity set is called the key attribute. For example, Roll_No will be unique for each student. In ER diagram, the key attribute is represented by an oval with underlying lines.
+<br><b>2. Composite Attribute</b>
+An attribute composed of many other attributes is called a composite attribute. For example, the Address attribute of the student Entity type consists of Street, City, State, and Country. In ER diagram, the composite attribute is represented by an oval comprising of ovals. 
+<br><b>3. Multivalued Attribute</b>
+<br>An attribute consisting of more than one value for a given entity. For example, Phone_No (can be more than one for a given student). In ER diagram, a multivalued attribute is represented by a double oval. 
+<br><b>4. Derived Attribute</b>
+  An attribute that can be derived from other attributes of the entity type is known as a derived attribute. e.g.; Age (can be derived from DOB). In ER diagram, the derived attribute is represented by a dashed oval. 
+  <h5>Relationship Type and Relationship Set</h5>
+  A Relationship Type represents the association between entity types. For example, ‘Enrolled in’ is a relationship type that exists between entity type Student and Course. In ER diagram, the relationship type is represented by a diamond and connecting the entities with lines. 
+  A set of relationships of the same type is known as a relationship set.
+  <h5>Degree of a Relationship Set:-</h5>
+The number of different entity sets participating in a relationship set is called the degree of a relationship set.  
+
+<br><b>1. Unary Relationship:</b> When there is only ONE entity set participating in a relation, the relationship is called a unary relationship. For example, one person is married to only one person. 
+<br><b>2. Binary Relationship:</b> When there are TWO entities set participating in a relationship, the relationship is called a binary relationship. For example, a Student is enrolled in a Course. 
+<br><b>3. n-ary Relationship:</b> When there are n entities set participating in a relation, the relationship is called an n-ary relationship. 
+<br>
+  <h5>Cardinality:-</h5>
+  The number of times an entity of an entity set participates in a relationship set is known as cardinality. Cardinality can be of different types: 
+  
+  <br><b>1. One-to-One:</b> When each entity in each entity set can take part only once in the relationship, the cardinality is one-to-one. Let us assume that a male can marry one female and a female can marry one male. So the relationship will be one-to-one. 
+  
+  the total number of tables that can be used in this is 2.
+  <br><b>2. One-to-Many:</b> In one-to-many mapping as well where each entity can be related to more than one relationship and the total number of tables that can be used in this is 2. Let us assume that one surgeon department can accommodate many doctors. So the Cardinality will be 1 to M. It means one department has many Doctors.
+
+total number of tables that can used is 3.
+<br><b>3. Many-to-One:</b> When entities in one entity set can take part only once in the relationship set and entities in other entity sets can take part more than once in the relationship set, cardinality is many to one. Let us assume that a student can take only one course but one course can be taken by many students. So the cardinality will be n to 1. It means that for one course there can be n students but for one student, there will be only one course. 
+
+The total number of tables that can be used in this is 4.
+<ul><li><h2>Keys</h2></li></ul>
+Keys are one of the basic requirements of a relational database model. It is widely used to identify the tuples(rows) uniquely in the table. We also use keys to set up relations amongst various columns and tables of a relational database.
+<h4>Different Types of Keys</h4>
+<ul><li>Candidate Key</li>
+<li>Primary Key</li>
+<li>Super Key</li>
+<li>Alternate Key</li>
+<li>Foreign Key</li>
+<li>Composite Key</li></ul>
+<ul><li><h5>Candidate Key</h5>
+The minimal set of attributes that can uniquely identify a tuple is known as a candidate key. For Example, STUD_NO in STUDENT relation. 
+
+<li>It is a minimal super key.</li>
+<li>It is a super key with no repeated data is called a candidate key.</li>
+<li>The minimal set of attributes that can uniquely identify a record.</li>
+<li>It must contain unique values.</li>
+<li>It can contain NULL values.</li>
+<li>Every table must have at least a single candidate key.</li>
+<li>A table can have multiple candidate keys but only one primary key.</li>
+<li>The value of the Candidate Key is unique and may be null for a tuple.</li>
+<li>There can be more than one candidate key in a relationship. </li><br>
+<li><h5>Primary Key</h5></li>
+There can be more than one candidate key in relation out of which one can be chosen as the primary key. For Example, STUD_NO, as well as STUD_PHONE, are candidate keys for relation STUDENT but STUD_NO can be chosen as the primary key (only one out of many candidate keys). 
+
+<li>It is a unique key.</li>
+<li>It can identify only one tuple (a record) at a time.</li>
+<li>It has no duplicate values, it has unique values.</li>
+<li>It cannot be NULL.</li>
+<li>Primary keys are not necessarily to be a single column; more than one column can also be a primary key for a table.</li><br>
+
+<li><h5>Super Key</h5></li>
+The set of attributes that can uniquely identify a tuple is known as Super Key. For Example, STUD_NO, (STUD_NO, STUD_NAME), etc. A super key is a group of single or multiple keys that identifies rows in a table. It supports NULL values. 
+
+<li>Adding zero or more attributes to the candidate key generates the super key.</li>
+<li>A candidate key is a super key but vice versa is not true.</li>
+<li>Super Key values may also be NULL.</li><br>
+
+
+<li><h5>Alternate Key</h5></li>
+The candidate key other than the primary key is called an alternate key.
+
+<li>All the keys which are not primary keys are called alternate keys.</li>
+<li>It is a secondary key.</li>
+<li>It contains two or more fields to identify two or more records.</li>
+<li>These values are repeated.</li>
+<li>Eg:- SNAME, and ADDRESS is Alternate keys</li><br>
+
+<li><h5>Foreign Key</h5></li>
+If an attribute can only take the values which are present as values of some other attribute, it will be a foreign key to the attribute to which it refers. The relation which is being referenced is called referenced relation and the corresponding attribute is called referenced attribute the relation which refers to the referenced relation is called referencing relation and the corresponding attribute is called referencing attribute. The referenced attribute of the referenced relation should be the primary key to it.
+
+It is a key it acts as a primary key in one table and it acts as 
+<li>secondary key in another table.</li>
+<li>It combines two or more relations (tables) at a time.</li>
+<li>They act as a cross-reference between the tables.</li>
+<li>For example, DNO is a primary key in the DEPT table and a non-key in EMP</li></ul>
+
+<ul><li><h2>Generalization</h2></li></ul>
+Generalization is the process of extracting common properties from a set of entities and creating a generalized entity from it. It is a bottom-up approach in which two or more entities can be generalized to a higher-level entity if they have some attributes in common. For Example, STUDENT and FACULTY can be generalized to a higher-level entity called PERSON as shown in Figure 1. In this case, common attributes like P_NAME, and P_ADD become part of a higher entity (PERSON), and specialized attributes like S_FEE become part of a specialized entity (STUDENT). 
+
+Generalization is also called as ‘ Bottom-up approach”.
+
+<ul><li><h2>Specialization</h2></li></ul>
+In specialization, an entity is divided into sub-entities based on its characteristics. It is a top-down approach where the higher-level entity is specialized into two or more lower-level entities. For Example, an EMPLOYEE entity in an Employee management system can be specialized into DEVELOPER, TESTER, etc. as shown in Figure 2. In this case, common attributes like E_NAME, E_SAL, etc. become part of a higher entity (EMPLOYEE), and specialized attributes like TES_TYPE become part of a specialized entity (TESTER). 
+
+Specialization is also called as ” Top-Down approch”.
+
+<ul><li><h2>Aggregation</h2></li></ul>
+An ER diagram is not capable of representing the relationship between an entity and a relationship which may be required in some scenarios. In those cases, a relationship with its corresponding entities is aggregated into a higher-level entity. Aggregation is an abstraction through which we can represent relationships as higher-level entity sets.
+
+For Example, an Employee working on a project may require some machinery. So, REQUIRE relationship is needed between the relationship WORKS_FOR and entity MACHINERY. Using aggregation, WORKS_FOR relationship with its entities EMPLOYEE and PROJECT is aggregated into a single entity and relationship REQUIRE is created between the aggregated entity and MACHINERY.
+
+
+  <h1><a href="https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y">To get More Information ...</a></h1>
+</div>
+
+<div id="section3" class="container-fluid bg-info  text-white" style="padding:100px 20px;">
+ <u><h1>Relational Model 
+  & Relational 
+  Algebra</h1></u>
+
+
+  <ul><li><h2>Mapping the ER and EER Model to the Relational Model:</h2></li></ul>
+  
+  <h4>Entity-Relationship (ER) Model:</h4> 
+  <ul><li> In the ER model, entities are represented as rectangles, attributes as ovals, and relationships as diamonds.</li>
+  <li>Entities become tables, attributes become columns, and relationships become foreign keys in the relational model.</li>
+  <li>Primary keys are chosen for each table to uniquely identify rows.</li></ul>
+  
+  <h4>Enhanced Entity-Relationship (EER) Model: </h4>
+  <ul><li>EER extends ER with additional concepts like specialization/generalization, aggregation, etc.</li>
+  <li> Each specialization becomes a separate table in the relational model, with a primary key shared with the parent table.</li>
+  <li>Aggregation relationships are typically represented by creating a new table that combines attributes from the aggregated entities.</li></ul>
+  
+  <ul><li><h2>Introduction to Relational Algebra:</h2></li></ul>
+  
+  <ul><li><b>Relational algebra</b> is a formal system for manipulating relations.</li>
+  <li>It consists of a set of operators that can be applied to one or more relations to produce another relation without altering the original relations.</li>
+  <li>Basic operators include selection (σ), projection (π), union (∪), set difference (-), cartesian product (×), and join (⨝).</li></ul>
+  
+  <ul><li><h2>Relational Algebra Expressions for Unary Relational Operations:</h2></li></ul>
+  
+  <b>1. Selection (σ):</b><br>
+     <ul><li> Selects rows from a relation that satisfy a given condition.</li>
+     <li>Example: σ_age > 30 (Employees)</li></ul>
+  
+  <b>2. Projection (π):</b>
+     <ul><li>Selects specific columns from a relation.</li>
+     <li>Example: π_name, age (Employees)</li></ul>
+  
+  <b>3. Renaming (ρ):</b>
+     <ul><li>Renames attributes or relations.</li>
+     <li>Example: ρ(EmployeeName/Name, Employees)</li></ul>
+  
+  <ul><li><h2>Set Theory Operations:</h2></li></ul>
+  
+  <ul><li><b>Union (∪):</b> Combines tuples from two relations, removing duplicates.</li>
+  <li><b>Intersection (∩):</b> Returns tuples common to both relations.</li>
+  <li><b>Set Difference (-)**: Returns tuples in one relation but not in the other.</b></li></ul>
+  
+  <ul><li><h2>Binary Relational Operations:</h2></li></ul>
+  
+  <b>1. Join (⨝):</b>
+     <ul><li> Combines tuples from two relations based on a related attribute.</li>
+     <li>Types: Inner Join, Left Outer Join, Right Outer Join, Full Outer Join.</li>
+     <li>Example: Employees ⨝ Departments</li></ul>
+  
+  <b>2. Intersection (∩):</b>
+     <ul><li> Returns tuples common to both relations.</li>
+     <li> Example: Employees ∩ Managers</li></ul>
+  
+  <ul><li><h2>Relational Algebra Queries in DBMS:</h2></li></ul>
+  
+  <ul><li>Relational algebra queries are expressed using a combination of these operators to retrieve specific data from the database.</li>
+  <li>Example:
+    Find the names of employees who work in the 'IT' department:</li>
+      <li> π_name (σ_department = 'IT' (Employees))</li>
+  
+  <li>Relational algebra queries are often the foundation for SQL queries that are executed by the database management system (DBMS) to retrieve data from the database.</li></ul>
+
+<h1><a href="https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y">To get More Information ...</a></h1>
+</div>
+      
+        
+<div id="section4" class="container-fluid bg-secondary  text-white" style="padding:100px 20px;">
+  <u><h1>Structured Query
+    Language (SQL) 
+    & Indexing</h1></u>
+
+  <h2>Overview of SQL (Structured Query Language):</h2>
+  
+  <ul><li>SQL is a standard language for accessing and manipulating databases.</li>
+  <li>It allows users to perform tasks such as querying data, updating data, creating and modifying database schemas, and controlling access to the database.</li></ul>
+  
+  <ul><li><h2>Data Definition Commands:</h2></li></ul>
+  
+  <ul><li><b>CREATE:</b> Used to create database objects such as tables, views, indexes, etc.</li>
+  <li><b>ALTER:</b> Modifies the structure of an existing database object.</li>
+  <li><b>DROP:</b> Deletes a database object.</li>
+  <li><b>TRUNCATE:</b> Deletes all rows from a table without deleting the table structure.</li>
+  <li><b>RENAME:</b> Renames a database object.</li></ul>
+  
+  <ul><li><h2>Set Operations:</h2></li></ul>
+  
+  <ul><li><b>UNION:</b> Combines the results of two or more SELECT statements into a single result set.</li>
+  <li><b>INTERSECT:</b> Returns the intersection of two result sets.</li>
+  <li><b>EXCEPT (or MINUS):</b> Returns the set difference of two result sets.</li></ul>
+  
+  <ul><li><h2>Aggregate Functions:</h2></li></ul>
+  
+  <ul><li><b>SUM:</b> Calculates the sum of values in a column.</li>
+  <li><b>AVG:</b> Calculates the average of values in a column.</li>
+  <li><b>COUNT:</b> Counts the number of rows in a result set or the number of non-null values in a column.</li>
+  <li><b>MAX:</b> Returns the maximum value in a column.</li>
+  <li><b>MIN: </b>Returns the minimum value in a column.</li></ul>
+  
+  <ul><li><h2>NULL Values:</h2></li></ul>
+  <ul>
+  <li>NULL represents missing or unknown data in SQL.</li>
+  <li>It is important to handle NULL values properly in SQL queries to avoid unexpected results.</li>
+  <li>Functions like IS NULL and IS NOT NULL are used to check for NULL values.</li></ul>
+  
+  <ul><li><h2>Data Manipulation Commands:</h2></li></ul>
+<ul>  
+  <li><b>INSERT:</b> Adds new rows into a table.</li>
+  <li><b>UPDATE:</b> Modifies existing rows in a table.</li>
+  <li><b>DELETE:</b> Removes rows from a table.</li></ul>
+  
+  <ul><li><h2>Data Control Commands:</h2></li></ul>
+  
+  <ul><li><b>GRANT:</b> Gives specific privileges to users or roles.</li>
+  <li><b>REVOKE:</b> Revokes previously granted privileges.</li></ul>
+  
+  <ul><li><h2>Complex Retrieval Queries using Group By:</h2></li></ul>
+  
+  <ul><li><b>GROUP BY:</b> Groups rows that have the same values into summary rows.</li>
+  <li><b>HAVING:</b> Filters groups based on specified conditions.</li></ul>
+  
+  <ul><li><h2>Recursive Queries:</h2></li></ul>
+  <ul>
+  <li>Recursive queries in SQL involve querying data that refers to itself in some way.</li>
+  <li>Commonly used for querying hierarchical data structures like organizational charts or bill of materials.</li></ul>
+  
+  <ul><li><h2>Nested Queries:</h2></li></ul>
+  <ul>
+  <li>Nested queries, also known as subqueries, are queries nested within another query.</li>
+   <li>They can be used to retrieve data based on the results of another query.</li></ul>
+  
+  <ul><li><h2>Integrity Constraints in SQL:</h2></li></ul>
+  
+  <ul><li><b>PRIMARY KEY:</b> Ensures that each row in a table is uniquely identified.</li>
+  <li><b>FOREIGN KEY:</b> Enforces referential integrity by ensuring that values in a column match values in another table's primary key.</li>
+  <li><b>UNIQUE:</b> Ensures that values in a column are unique.</li>
+  <li><b>CHECK:</b> Allows you to specify conditions that must be met for data to be valid.</li></ul>
+  
+  <ul><li><h2>Database Programming with JDBC (Java Database Connectivity):</h2></li></ul>
+  
+  <ul><li>JDBC is a Java API for connecting and executing SQL queries against a database.</li>
+  <li>It provides classes and interfaces for connecting to a database, executing SQL statements, and processing the results.</li></ul>
+  
+  <ul><li><h2>Security and Authorization:</h2></li></ul>
+  
+  <ul><li><b>GRANT:</b> Grants specific privileges to users or roles.</li>
+  <li><b>REVOKE:</b> Revokes previously granted privileges.</li></ul>
+  
+  <ul><li><h2>Functions and Procedures in SQL:</h2></li></ul>
+  <ul>
+  <li><b>Functions:</b> Accept parameters, perform computations, and return a single value.</li>
+  <li><b>Procedures:</b> Similar to functions but can perform multiple operations and can return multiple values.</li></ul>
+  
+  <ul><li><h2>Cursors:</h2></li></ul>
+<ul>  
+  <li>Cursors allow for processing rows returned by a SQL query one at a time.</li>
+  <li>They provide a mechanism for fetching and manipulating rows within a result set.</li></ul>
+<h1><a href="https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y">To get More Information ...</a></h1>
+
+</div>
+
+<div id="section5" class="container-fluid bg-success  text-white" style="padding:100px 20px;">
+  <u><h1> Relational 
+    Database Design</h1></u>
+   
+<ul><li><h2>Design Guidelines for Relational Schema:</h2></li></ul>
+
+<b>1. Atomicity:</b> Ensure that each attribute contains only indivisible data values.
+<br><b>2. Uniqueness:</b> Define appropriate primary keys to uniquely identify each row in a table.
+<br><b>3. Minimize redundancy:</b> Avoid storing the same information in multiple places to prevent data inconsistency and save storage space.
+<br><b>4. Normalization:</b> Organize data to eliminate redundancy and dependency issues.
+<br><b>5. Consistency:</b> Enforce constraints and rules to maintain data integrity.
+<br><b>6. Clarity and simplicity:</b> Design schemas that are easy to understand and maintain.
+<br><b>7. Performance:</b> Consider performance implications when designing schemas, such as indexing and denormalization.
+
+<ul><li><h2>Functional Dependencies (FDs):</h2></li></ul>
+<ul>
+<li><b>Functional Dependency:</b> It is a constraint between two sets of attributes in a relation from a database.</li>
+<li>If the value of one attribute uniquely determines the value of another attribute, it is represented as A -> B, where A determines B.</li>
+<li>Example: If 'Employee_ID' determines 'Employee_Name', we write: Employee_ID -> Employee_Name.</li></ul>
+
+<ul><li><h2>Database Tables and Normalization:</h2></li></ul>
+<ul>
+<li><b>Normalization:</b> It is the process of organizing data in a database to reduce redundancy and dependency.</li>
+<li>It involves breaking down large tables into smaller ones and defining relationships between them.</li>
+<li>Normalization helps in improving data integrity, reducing data redundancy, and improving query performance.</li></ul>
+
+<ul><li><h2>The Need for Normalization:</h2></li></ul>
+<ul>
+<li>To eliminate redundancy and inconsistency in data.</li>
+<li>To reduce the storage requirements.</li>
+<li>To prevent update anomalies (insert, update, delete operations leading to inconsistencies).</li>
+<li>To simplify data maintenance and enhance data integrity</li></ul>
+
+<ul><li><h2>The Normalization Process:</h2></li></ul>
+
+<b>1. **First Normal Form (1NF):</b>
+   <ul><li>Eliminate repeating groups by putting each attribute in a separate column.</li>
+  <li> Ensure that each column contains atomic values.</li>
+   <li>Example: Splitting a column containing multiple values into separate columns.</li></ul>
+
+<b>2. Second Normal Form (2NF):</b>
+   <ul><li> Meet the requirements of 1NF.</li>
+   <li> Remove partial dependencies by ensuring that non-key attributes depend on the entire primary key.</li>
+   <li>Example: Splitting a table into separate tables to remove partial dependencies.</li></ul>
+
+<b>3. Third Normal Form (3NF):</b>
+   <ul><li>Meet the requirements of 2NF.</li>
+   <li>Eliminate transitive dependencies by ensuring that non-key attributes depend only on the primary key, not on other non-key attributes.</li>
+   <li>Example: Splitting a table to remove transitive dependencies.</li></ul>
+
+<b>4. Boyce-Codd Normal Form (BCNF):</b>
+   <ul><li>A stricter form of 3NF where every determinant is a candidate key.</li>
+   <li>Ensures that there are no non-trivial functional dependencies of attributes on candidate keys.</li>
+   <li>Example: Ensuring that every determinant is a candidate key by decomposing tables further.</li></ul>
+  
+  
+  <h1><a href="https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y">To get More Information ...</a></h1>
+</div>
+
+
+
+<div id="section6" class="container-fluid bg-warning text-white" style="padding:100px 20px;">
+  <h1>Transactions 
+    Management and 
+    Concurrency and 
+    Recovery</h1>
+  <ul><li><h2>ACID Properties</h2></li></ul>
+  A transaction is a single logical unit of work that accesses and possibly modifies the contents of a database. Transactions access data using read and write operations. 
+  In order to maintain consistency in a database, before and after the transaction, certain properties are followed. These are called ACID properties. 
+  <h4>Atomicity:</h4>
+By this, we mean that either the entire transaction takes place at once or doesn’t happen at all. There is no midway i.e. transactions do not occur partially. Each transaction is considered as one unit and either runs to completion or is not executed at all. It involves the following two operations. 
+<br><b>—</b>Abort: If a transaction aborts, changes made to the database are not visible. 
+<br><b>—</b>Commit: If a transaction commits, changes made are visible. 
+<br>Atomicity is also known as the ‘All or nothing rule’.   
+<h4>Consistency:</h4>
+This means that integrity constraints must be maintained so that the database is consistent before and after the transaction. It refers to the correctness of a database.
+<h4>Isolation:</h4>
+This property ensures that multiple transactions can occur concurrently without leading to the inconsistency of the database state. Transactions occur independently without interference. Changes occurring in a particular transaction will not be visible to any other transaction until that particular change in that transaction is written to memory or has been committed. This property ensures that the execution of transactions concurrently will result in a state that is equivalent to a state achieved these were executed serially in some order. 
+<h4>Durability:</h4> 
+This property ensures that once the transaction has completed execution, the updates and modifications to the database are stored in and written to disk and they persist even if a system failure occurs. These updates now become permanent and are stored in non-volatile memory. The effects of the transaction, thus, are never lost. 
+The ACID properties, in totality, provide a mechanism to ensure the correctness and consistency of a database in a way such that each transaction is a group of operations that acts as a single unit, produces consistent results, acts in isolation from other operations, and updates that it makes are durably stored. 
+
+ 
+<br>
+ACID properties are the four key characteristics that define the reliability and consistency of a transaction in a Database Management System (DBMS). The acronym ACID stands for Atomicity, Consistency, Isolation, and Durability. Here is a brief description of each of these properties:
+
+<br>1. Atomicity: Atomicity ensures that a transaction is treated as a single, indivisible unit of work. Either all the operations within the transaction are completed successfully, or none of them are. If any part of the transaction fails, the entire transaction is rolled back to its original state, ensuring data consistency and integrity.
+<br>2. Consistency: Consistency ensures that a transaction takes the database from one consistent state to another consistent state. The database is in a consistent state both before and after the transaction is executed. Constraints, such as unique keys and foreign keys, must be maintained to ensure data consistency.
+<br>3. Isolation: Isolation ensures that multiple transactions can execute concurrently without interfering with each other. Each transaction must be isolated from other transactions until it is completed. This isolation prevents dirty reads, non-repeatable reads, and phantom reads.
+<br>4. Durability: Durability ensures that once a transaction is committed, its changes are permanent and will survive any subsequent system failures. The transaction’s changes are saved to the database permanently, and even if the system crashes, the changes remain intact and can be recovered.
+Overall, ACID properties provide a framework for ensuring data consistency, integrity, and reliability in DBMS. They ensure that transactions are executed in a reliable and consistent manner, even in the presence of system failures, network issues, or other problems. These properties make DBMS a reliable and efficient tool for managing data in modern organizations.  
+
+<ul><li><h2>Transaction Control</h2></li></ul>
+The transaction is a single logical unit that accesses and modifies the contents of the database. Transactions access data using read and write operations. Transaction is a single operation of processing that can have many operations. Transaction is needed when more than one user wants to access same database. Transaction has ACID properties.
+<h4>ACID Properties of Transaction:</h4>
+ACID stands for Atomicity, Consistency, Isolation and Durability
+
+<br><b>1. Atomicity:</b> All the operations in a transaction are considered to be atomic and as one unit. If system fails or any read/write conflicts occur during transaction the system needs to revert back to its previous state. Atomicity is maintained by the Transaction Management Component.
+<br><b>2. Consistency:</b> Every transaction should lead to database connection from one valid state to other valid state. If system fails because of invalid data while doing an operation revert back the system to its previous state. Consistency is maintained by the Application manager.
+<br><b>3. Isolation:</b> If multiple transactions are executing on single database, each transaction should be isolated from other transaction. If multiple transactions are performed on single database, operation from any transaction should not interfere with operation in other transaction. Isolation is maintained by the concurrency control manager. 
+<br><b>4. Durability:</b> Durability means the changes made during the transactions should exist after completion of transaction. Changes must be permanent and must not be lost due to any database failure. It is maintained by the recovery manager.
+<h4>Schedule:</h4>
+Schedule is process of grouping transactions into one and executing them in a predefined order. It is a sequence of execution of operation from various transactions. Schedule is required in database because when multiple transactions execute in parallel, they may affect the result of each other. So, to resolve this the order of the transactions are changed by creating a schedule.
+
+<h5>Types of Schedules:</h5>
+<b>1. Serial Schedule:</b> A schedule in which the transactions are defined to execute one after another is called serial schedule.
+<br><b>2. Non- Serial Schedule:</b> A schedule in which the transactions are defined to execute in any order is called non-serial schedule.
+
+<ul><li><h2>Serializability – Conflict 
+  and View</h2></li></ul>
+
+  In computer science, serializability is a property of a system describing how different processes operate on shared data. A system is serializable if its result is the same as if the operations were executed in some sequential order, meaning there is no overlap in execution
+  
+  <h4>1. Conflict Serializability</h4>
+  Conflict serializability is a type of serializability in which conflicting operations on the same data items are executed in an order that preserves database consistency. Each transaction is assigned a unique number, and the operations within each transaction are executed in order based on that number. This ensures that no two conflicting operations are executed concurrently. For example, consider a database with two tables: Customers and Orders. A customer can have multiple orders, but each order can only be associated with one customer.
+  
+  <br>Key conditions for conflict serializability.
+  <br>
+  <ul><li>Both operations belong to different transactions</li>
+  <li>Both operations are on the same data item</li>
+  <li>At least one of the two operations is a write operation</li></ul>
+  If two transactions were to execute concurrently, one adding an order for customer A and the other adding an order for customer B, conflict serializability would ensure that the transaction adding the order for customer A would finish before the transaction adding the order for customer B. This would prevent any inconsistency in the database, such as an order being associated with the wrong customer.
+
+  <h4>2. View Serializability</h4>
+  View serializability is a type of serializability in which each transaction produces results that are equivalent to some well-defined sequential execution of all transactions in the system. Unlike conflict serializability, which focuses on preventing inconsistencies within the database, view serializability in DBMS focuses on providing users with consistent views of the database.
+  <br>
+  In order to better understand view serialization in a database management system, it is important to consider schedules S1 and S2. These schedules are created with two transactions in mind, T1 and T2. In order for these schedules to be viewed as equivalent, the following three conditions must be met.
+  <br>
+  The first condition is that both schedules must have the same set of committed transactions. This simply means that both schedules S1 and S2, cannot have different committed transactions. If one schedule has a committed transaction that the other does not, then the schedules are not viewed as equivalent.
+<ul><li><h2>Deadlock</h2></li></ul>
+  <p>In a database management system (DBMS), a deadlock occurs when two or more transactions are waiting for each other to release resources, such as locks on database objects, that they need to complete their operations. As a result, none of the transactions can proceed, leading to a situation where they are stuck or “deadlocked.”
+<br>
+  Deadlocks can happen in multi-user environments when two or more transactions are running concurrently and try to access the same data in a different order. When this happens, one transaction may hold a lock on a resource that another transaction needs, while the second transaction may hold a lock on a resource that the first transaction needs. Both transactions are then blocked, waiting for the other to release the resource they need.
+  <br>
+  DBMSs often use various techniques to detect and resolve deadlocks automatically. These techniques include timeout mechanisms, where a transaction is forced to release its locks after a certain period of time, and deadlock detection algorithms, which periodically scan the transaction log for deadlock cycles and then choose a transaction to abort to resolve the deadlock.
+  <br>
+  It is also possible to prevent deadlocks by careful design of transactions, such as always acquiring locks in the same order or releasing locks as soon as possible. Proper design of the database schema and application can also help to minimize the likelihood of deadlocks
+  </p>
+  <ul><li><h2>Timestamp based Concurrency Control</h2></li></ul>
+  Concurrency Control can be implemented in different ways. One way to implement it is by using Locks. Now, let us discuss Time Stamp Ordering Protocol. 
+
+As earlier introduced, Timestamp is a unique identifier created by the DBMS to identify a transaction. They are usually assigned in the order in which they are submitted to the system. Refer to the timestamp of a transaction T as TS(T). For the basics of Timestamp, you may refer here. 
+
+<h4>Timestamp Ordering Protocol – </h4>
+The main idea for this protocol is to order the transactions based on their Timestamps. A schedule in which the transactions participate is then serializable and the only equivalent serial schedule permitted has the transactions in the order of their Timestamp Values. Stating simply, the schedule is equivalent to the particular Serial Order corresponding to the order of the Transaction timestamps. An algorithm must ensure that, for each item accessed by Conflicting Operations in the schedule, the order in which the item is accessed does not violate the ordering. To ensure this, use two Timestamp Values relating to each database item X. 
+<ul>
+<li>W­_TS(X) is the largest timestamp of any transaction that executed write(X) successfully.</li>
+<li>R_TS(X) is the largest timestamp of any transaction that executed read(X) successfully.</li></ul>
+<h4>Basic Timestamp Ordering – </h4>
+Every transaction is issued a timestamp based on when it enters the system. Suppose, if an old transaction Ti has timestamp TS(Ti), a new transaction Tj is assigned timestamp TS(Tj) such that TS(Ti) < TS(Tj). The protocol manages concurrent execution such that the timestamps determine the serializability order. The timestamp ordering protocol ensures that any conflicting read and write operations are executed in timestamp order. Whenever some Transaction T tries to issue a R_item(X) or a W_item(X), the Basic TO algorithm compares the timestamp of T with R_TS(X) & W_TS(X) to ensure that the Timestamp order is not violated. This describes the Basic TO protocol in the following two cases. 
+<br>
+1. Whenever a Transaction T issues a W_item(X) operation, check the following conditions: 
+<ul><li>If R_TS(X) > TS(T) and if W_TS(X) > TS(T), then abort and rollback T and reject the operation. else,</li>
+<li>Execute W_item(X) operation of T and set W_TS(X) to TS(T).</li></ul>
+2. Whenever a Transaction T issues a R_item(X) operation, check the following conditions: 
+<ul><li>If W_TS(X) > TS(T), then abort and reject T and reject the operation, else</li>
+<li>If W_TS(X) <= TS(T), then execute the R_item(X) operation of T and set R_TS(X) to the larger of TS(T) and current R_TS(X)</li></ul>
+  
+<ul><li><h2>Recovery System:</h2>
+
+The recovery system ensures the durability and consistency of the database despite failures such as system crashes or disk errors. Recovery involves restoring the database to a consistent state after a failure.
+
+<h4>Log-based Recovery:</h4>
+
+Log-based recovery is a common technique used to recover the database after a failure. In this approach, a log (also known as a journal) records all changes made to the database during transaction execution. The log ensures that changes are written to stable storage before they are applied to the database.
+
+<h5>Steps in Log-based Recovery:</h5>
+
+<b>1. Analysis Phase:</b> During normal operation, all changes made by transactions are recorded in the log. After a failure, the recovery manager analyzes the log to determine the transactions that were active at the time of the failure.
+<br>
+<b>2. Redo Phase:</b> In this phase, the recovery manager applies the changes recorded in the log to the database. This involves reapplying the updates of transactions that committed but whose changes were not yet written to disk.
+<br>
+<b>3. Undo Phase:</b> If a transaction was active at the time of the failure but had not committed, its changes need to be undone to maintain atomicity and consistency. The recovery manager performs undo operations by applying compensating changes (inverse operations) recorded in the log.
+<br>
+<b>4. Commit Phase:</b> After redo and undo operations are complete, the recovery manager ensures that all committed transactions have their changes permanently stored in the database.
+
+Log-based recovery ensures that the database can be restored to a consistent state even after a failure, maintaining the ACID properties of transactions.
+
+  <h1><a href="https://www.youtube.com/watch?v=kBdlM6hNDAE&list=PLxCzCOWd7aiFAN6I8CuViBuCdJgiOkT2Y">To get More Information ...</a></h1>
+        </div>
+      </div>
+</div>
+
+</body>
+<footer class="footer">
+  <p>&copy; Self Study Reserved Rights 2024</p>
+  
+  </ul>
+</div>
+</footer>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

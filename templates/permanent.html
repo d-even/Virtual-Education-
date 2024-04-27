@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Self Study</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            header{
+            height:170px;
+            padding-top:10em;
+            background-color: #283E50;}
+        #SS{
+            position: absolute;
+            height:100px;
+            width: 25%;
+            display: inline-block;
+            top: 10px;
+            left: 20px;
+            background-size: cover;
+        }
+        text{
+            height: 10px;
+            
+            
+            color: rgba(255,255,255,.75);
+            font-family: 'Anonymous Pro', monospace;  
+            background-color: rgb(25,25,25);  
+          }
+          .line-1{
+              position: relative;
+              width: 24em;
+              bottom: 100px ;
+              margin-left:50% ;
+              border-right: 2px solid rgba(255,255,255,.75);
+              font-size: 220%;
+              text-align: center;
+              white-space: nowrap;
+              overflow: hidden;
+              transform: translateY(-50%);    
+          }
+          
+          /* Animation */
+          .anim-typewriter{
+            animation: typewriter 4s steps(44) 1s 1 normal both,
+            blinkTextCursor 500ms steps(44) infinite normal;
+          }
+          @keyframes typewriter{
+            from{width: 0;}
+            to{width: 18em;}
+          }
+          @keyframes blinkTextCursor{
+            from{border-right-color: rgba(255,255,255,.75);}
+            to{border-right-color: transparent;}
+          }
+
+          @media only screen and(max-width: 1150px) {
+            .logo{
+              width: 500px;
+            }
+          }
+        
+        </style>
+    <header>
+        <text><p class="line-1 anim-typewriter">Todays Learner Tomorrow's Leader!</p></text>
+        <a id="SS" href = "" target="_main">
+        <img class="logo"  src="{%static "image/elf.png" %}"alt=",,,">
+        </a> 
+        
+    </header>
+</head>
+<body id="bg"style="background-image: url('{% static "image/back.png" %}');background-size:cover">
+
+</body>
+{% block body %}
+
+{% endblock  %}
+
+
+    </html>

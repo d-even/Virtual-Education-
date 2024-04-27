@@ -1,0 +1,894 @@
+
+<!-- {% include "permanent.html" %} -->
+<!-- {% block footer %} -->
+<!-- {% load static %} -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Self Study</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            header{
+            height:170px;
+            padding-top:10em;
+            background-color: #283E50;}
+        #SS{
+            position: absolute;
+            height:100px;
+            width: 25%;
+            display: inline-block;
+            top: 10px;
+            left: 20px;
+            background-size: cover;
+        }
+        text{
+            height: 10px;
+            
+            
+            color: rgba(255,255,255,.75);
+            font-family: 'Anonymous Pro', monospace;  
+            background-color: rgb(25,25,25);  
+          }
+          .line-1{
+              position: relative;
+              width: 24em;
+              bottom: 100px ;
+              margin-left:50% ;
+              border-right: 2px solid rgba(255,255,255,.75);
+              font-size: 220%;
+              text-align: center;
+              white-space: nowrap;
+              overflow: hidden;
+              transform: translateY(-50%);    
+          }
+          
+          /* Animation */
+          .anim-typewriter{
+            animation: typewriter 4s steps(44) 1s 1 normal both,
+                       blinkTextCursor 500ms steps(44) infinite normal;
+          }
+          @keyframes typewriter{
+            from{width: 0;}
+            to{width: 18em;}
+          }
+          @keyframes blinkTextCursor{
+            from{border-right-color: rgba(255,255,255,.75);}
+            to{border-right-color: transparent;}
+          }
+
+          @media only screen and(max-width: 1150px) {
+             .logo{
+              width: 500px;
+             }
+          }
+        
+        </style>
+    <header>
+        <text><p class="line-1 anim-typewriter">Todays Learner Tomorrow's Leader!</p></text>
+        <a id="SS" href = "" target="_main">
+        <img class="logo"  src="{%static "image/elf.png" %}"alt=",,,">
+        </a> 
+        
+    </header>
+</head>
+<body id="bg"style="background-image: url('{% static "image/bg.png" %}');background-size:cover">
+<!-- {% block body %}
+{% endblock  %} -->
+
+
+    </html>
+<style>
+    .footer {
+        height:150px;
+        bottom:0;
+        width:100%;
+      background-color: #283E50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    
+    
+    a.button4{
+            display:inline-block;
+            padding:30px 1.2em;
+            margin-top: 70px;
+            margin-left: 25%;
+            border:0.16em solid rgba(255,255,255,0);
+            border-radius:2em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family:'Roboto',sans-serif;
+            font-weight:5000;
+            font-size:30px;
+            color:#FFFFFF;
+            text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+            text-align:center;
+            width: 50%;
+            display: block;
+            transition: all 0.2s;
+}
+a.button4:hover{
+    border-color: rgba(255,255,255,1);
+}
+@media all and (max-width:30em){
+a.button4{
+display:block;
+margin:0.2em auto;
+}
+}
+
+
+    </style>
+
+
+  <!-- {% endblock  %} -->
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50" >
+
+<!-- Navbar -->
+<nav class="navbar sticky-top justify-content-center navbar-expand-sm bg-dark navbar-dark ">
+<br>
+
+
+    <ul class="navbar-nav">
+    <li class="nav-item">
+        <a class="nav-link" href="#section1">Fundamentals of OS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section2">Process Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section3">Process Coordination</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section4">Memory Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section5">storage Management</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#section6">Special-Purpose Operating System</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+    <h1>Fundamentals of OS</h1>
+    <p>A program that acts as an intermediary between a user and the
+      computer hardware.<br><li>Operating system goals:<br></li>
+      <ol><li>Execute user programs and make solving user problems
+      easier.<br></li>
+      <li>Make the computer system convenient to use.<br></li>
+      <li> Use the computer hardware in an efficient manner.<br></p></li></ol>
+      <p><li>The most fundamental system program is the operating system,
+        whose job is to control all the computer's resources and provide
+        a base upon which the application programs can be written.</p></li>
+    <ul>
+      <h2><li>Operating System Structure</li></h2>
+      <h4>Computer system can be divided into four components</h4>
+      <li><b>Hardware </b>– provides basic computing resources
+         CPU, memory, I/O devices</li>
+      <li><b>Operating system </b>-Controls and coordinates use of hardware among various
+        applications and users</li>
+      <li><b>Application programs</b> -define the ways in which the system
+        resources are used to solve the computing problems of the users
+        Word processors, compilers, web browsers, database
+        systems, video games</li> 
+      <li><b>Users</b> -People, machines, other computers</li>
+      <h2><li>Operating System Functions</li></h2>
+      <ol><b><li>Process Management</li>
+<li> Memory Management</li>
+<li>Storage Management</li>
+<li>I/O Subsystem</li>
+<li> Protection and Security</li></b></ol><br>
+      <ol><li><b>PROCESS MANAGEMENT:-</b><br>A process is a program in execution.<br>
+        • It is a unit of work within the system.<br>
+        • Program is a passive entity, process is an active
+        entity.<br>
+        • Process needs resources to accomplish its task<br>
+        
+        • CPU, memory, I/O, files<br>
+        • Initialization data<br>
+        
+        • Process termination requires reclaim of any reusable
+        resources</li>
+        <h4>Process Management Activities</h4>
+The operating system is responsible for the
+following activities in connection with process
+management:<br>
+▪ Creating and deleting both user and system
+processes<br>
+▪ Suspending and resuming processes<br>
+▪ Providing mechanisms for process
+synchronization<br>
+▪ Providing mechanisms for process
+communication<br>
+▪ Providing mechanisms for deadlock handling
+<br><li><b>MEMORY MANAGEMENT:-</b></li>
+• All data in memory before and after processing<br>
+• All instructions in memory in order to execute
+<h4>Memory management activities</h4>
+▪ Keeping track of which parts of memory are
+currently being used and by whom<br>
+▪ Deciding which processes (or parts thereof) and
+data to move into and out of memory<br>
+▪ Allocating and deallocating memory space as
+needed
+<li><b>STORAGE MANAGEMENT:-</b></li>
+• OS provides uniform, logical view of information
+storage<br>
+▪ Logical storage unit - file<br>
+▪ Each medium is controlled by device (i.e., disk
+drive, tape drive)
+<h4>File-System management</h4>
+• Files usually organized into directories<br>
+• Access control on most systems to
+determine who can access what
+<h4>Storage management activities</h4>
+• Creating and deleting files and directories<br>
+• Primitives to manipulate files and dirs<br>
+• Mapping files onto secondary storage<br>
+• Backup files onto stable (non-volatile) storage
+media
+<li><b>I/O SUBSYSTEM:-</b></li>
+• One purpose of OS is to hide peculiarities of hardware
+devices from the user<br>
+• I/O subsystem responsible for:-<br>
+• Memory management of I/O including<br>
+• buffering (storing data temporarily while it is
+being transferred),<br>
+• caching (storing parts of data in faster storage
+for performance),<br>
+• spooling (the overlapping of output of one job
+with input of other jobs)<br>
+• General device-driver interface<br>
+• Drivers for specific hardware devices
+<li><b>PROTECTION AND SECURITY:-</b></li>
+• Protection – any mechanism for controlling access
+of processes or users to resources defined by the OS<br>
+
+• Security – defense of the system against internal
+and external attacks<br>
+• Huge range, including denial-of-service, worms,
+viruses, identity theft, theft of service</ol>
+<h2>Operating System Services</h2>
+<b>• File-system manipulation -</b> The file system is of
+particular interest. Programs need to read and write
+files and directories, create and delete them, search
+them, list file Information, permission management.<br>
+
+<b>• Communications –</b> Processes may exchange
+information, on the same computer or between
+computers over a network.
+
+Communications may be via shared memory or
+through message passing (packets moved by the OS)<br>
+<b>• Error detection – </b>OS needs to be constantly aware of
+possible errors.
+
+ May occur in the CPU and memory hardware, in
+I/O devices, in user program.
+ For each type of error, OS should take the
+appropriate action to ensure correct and
+consistent computing.
+ Debugging facilities can greatly enhance the
+user’s and programmer’s abilities to efficiently
+use the system.<br>
+<b>• Resource allocation -</b> When multiple users or
+multiple jobs running concurrently, resources must
+be allocated to each of them.
+Many types of resources - CPU cycles, main
+memory, file storage, I/O devices.<br>
+
+<b>• Accounting - </b>To keep track of which users use
+how much and what kinds of computer resources
+      <h2>Operating Sysyem Structure</h2>
+      • General-purpose OS is very large program.<br>
+• Various ways to structure ones:-<br>
+• Simple structure – MS-DOS<br>
+• More complex -- UNIX<br>
+• Layered – an abstraction<br>
+• Microkernel -Mach<br>
+<h3>• MS-DOS –</h3> written to provide the
+most functionality in the least space<br>
+• Not divided into modules<br>
+• Although MS-DOS has some
+structure, its interfaces and levels
+of functionality are not well
+separated<br>
+<h3>• UNIX –</h3> limited by hardware functionality, the original UNIX
+operating system had limited structuring. The UNIX OS consists of
+two separable parts<br>
+• Systems programs<br>
+• The kernel<br>
+• Consists of everything below the system-call interface and
+above the physical hardware<br>
+• Provides the file system, CPU scheduling, memory
+management, and other operating-system functions; a large
+number of functions for one level<br>
+<h2>System Boot</h2>
+• When power initialized on system, execution starts at a fixed
+memory location<br>
+• Firmware ROM used to hold initial boot code<br>
+• Operating system must be made available to hardware so hardware
+can start it<br>
+• Small piece of code – bootstrap loader, stored in ROM or
+EEPROM locates the kernel, loads it into memory, and starts it<br>
+• Sometimes two-step process where boot block at fixed location
+loaded by ROM code, which loads bootstrap loader from disk<br>
+• Common bootstrap loader, GRUB, allows selection of kernel from
+multiple disks, versions, kernel options<br>
+• Kernel loads and system is then running
+    <h1><a href="https://youtu.be/Qa6csfkK7_I?si=aJXWohha1trfar2D">To get More Information ...</a></h1>
+  </div>
+<!-- pcpf -->
+
+<div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+  <h1>Process Management</h1>
+  • A program in execution<br>
+• An instance of a program running on a computer<br>
+• The entity that can be assigned to and executed on
+a processor<br>
+• A unit of activity characterized by the execution of
+a sequence of instructions, a current state, and an
+associated set of system instructions<br>
+<h2>Process Control Block (PCB)</h2>
+• The PCB contains sufficient information about process
+so that it is possible to interrupt a running process and
+later resumes execution as of no interruption occurred.<br>
+• When a process is interrupted , the current values of
+PC and processor registers (context data) are saved in
+a memory fields corresponding to PCB<br>
+• And the state of process changed to some other value
+such as blocked.<br>
+• OS now free to put some other process in running
+state.<br>
+<h2>Introduction to Thread</h2>
+• A thread is a basic unit of CPU utilization.<br>
+• It comprises a thread ID, a PC, a register set, and a
+stack.<br>
+• It shares with other threads belonging to the same
+process its code section, data section, and other
+operating-system resources, such as open files and
+signals.<br>
+• A traditional (or heavyweight)process has a single
+thread of control.<br>
+• If a process has multiple threads of control, it can
+perform more than one task at a time.<br>
+<h2>Types OF Threads</h2>
+There are two broad categories of thread
+implementation:-<br>
+<ol>
+  <li>User Level Threads (ULT)</li>
+  <li>Kernel Level Threads (KLT)</li>
+</ol>
+<ol>
+  <li><b>User Level Threads (ULT):-</b></li>
+  • The threads library is contains code for<br>
+✔ Creating and destroying threads,<br>
+✔ Passing messages and data between threads,<br>
+✔ Scheduling thread execution,<br>
+✔ Saving and restoring thread context.<br>
+• By default, an application begins with a single
+thread and begins running with that thread.<br>
+• The application may spawn a new thread to run
+within the same process.<br>
+<li><b>Kernel Level Threads (KLT):-</b></li>
+• In a pure KLT facility, all the work of thread
+management done by the kernel.<br>
+• There is no thread management code in application
+level, simply an application programming interface
+(API) to the kernel thread facility.<br>
+• The kernel maintains the context information for the
+process as a whole and for individual threads within
+the process.<br>
+• Scheduling by the kernel is done on a thread basis.
+• The kernel can simultaneously schedule multiple
+threads from the same process on multiple
+processor.<br>
+• If one thread in a process is blocked, the kernel can
+schedule another thread of same process.<br>
+</ol>
+<h2>Thread Models</h2>
+• Support for threads may be provided either at the
+user level, for user threads, or by the kernel, for
+kernel threads.<br>
+
+• User threads are supported above the kernel and are
+managed without kernel support, whereas kernel
+threads are supported and managed directly by the
+operating system.<br>
+
+• Virtually all OS - including Windows, Linux, Mac
+OS X, Solaris, and Tru64 UNIX (formerly Digital
+UNIX) support kernel threads.<br>
+• A relationship must exist between user threads and
+kernel threads.<br>
+• Three common ways of establishing such a
+relationship.<br>
+1. Many-to-One Model<br>
+2. One-to-One Model<br>
+3. Many-to-Many Model<br>
+<b>1. Many-to-One Model:</b> The many-to-one model
+maps many user-level threads to one kernel thread.Thread management is done by the
+thread library in user space, so it is
+efficient; But the entire process will block if a
+thread makes a blocking system
+call.<br>
+<b>2. One-to-One Model:</b> The one-to-one model maps
+each user thread to a kernel thread.It provides more concurrency than
+the many-to-one model by
+allowing another thread to run
+when a thread makes a blocking
+system call; It also allows multiple threads to run in parallel on
+multiprocessors.The only drawback to this model is that creating a
+user thread requires creating the corresponding kernel
+thread.<br>
+<b>3. Many-to-Many Model:</b>
+The number of kernel threads
+may be specific to either a
+particular application or a
+particular machine.Developers can create as many user threads as
+necessary, and the corresponding kernel threads can
+run in parallel on a multiprocessor.Also, when a thread performs a blocking system
+call, the kernel can schedule another thread for
+execution.<br>
+<h2>Scheduling</h2>
+1. When an executing process finishes its execution
+and exits, then another process is required for
+execution.<br>
+2. When the executing process needs to wait for an
+I/O or resource, it is blocked. Therefore, there is
+need to select another process for execution.<br>
+3. When an I/O or resource being used by any
+process is released, then the blocked process,
+waiting for the I/O or resource, goes back to the
+ready queue.<br>
+4. In a multi-user time-sharing environment, a fixed
+time period/time slice is allotted to every process,
+so that there is uniform response to every process.<br>
+5. When an executing process creates its child
+process, then scheduling is performed to give the
+newly created process a chance for execution<br>
+6. When a newly added process in the ready queue
+has higher priority compared to that of the running
+process.<br>
+7. If there is an error or exception in the process or
+hardware, then the running process may need to be
+stopped and sent back to the ready queue.<br>
+8. If all the processes are waiting for any resource or
+I/O, there is need to suspend some blocked process
+and make space for a new process.<br>
+<h2>Types of Schedulers</h2>
+• The classification of schedulers is based on the
+frequency of their use in the system.<br>
+
+1. Long-term Scheduler<br>
+2. Short-term Scheduler<br>
+3. Medium-term Scheduler<br>
+<b>1. Long-term Scheduler:</b><br>
+• This scheduler is invoked when there is a need to
+perform job scheduling, that is, when a job from the
+job pool is selected to be sent to the ready queue.<br>
+
+• However, this type of scheduling does not happen
+very frequently because a process needs some time
+in the system to be executed.<br>
+<b>2. Short-term Scheduler</b>
+<br>• Whenever there is an interrupt, the running process
+stops, and the short-term scheduler is invoked
+every time to select another process for execution.<br>
+
+• That is why this scheduler is called a short-term
+scheduler.
+<b>3. Medium-term Scheduler</b><br>
+• This scheduler is invoked when there is a need to
+swap out some blocked processes.<br>
+
+• It can happen in the case when all processes are
+blocked for some I/O devices and there is no ready
+process to execute and there is no space for any
+other process.<br>
+
+• In this case, some blocked processes need to be
+swapped out from the main memory to the hard
+disk.<br>
+<h2>Scheduling Criteria</h2>
+• Different CPU-scheduling algorithms have different
+properties, and the choice of a particular algorithm
+may favor one class of processes over another.<br>
+
+i. CPU utilization<br>
+ii. Throughput<br>
+iii. Turnaround time<br>
+iv. Waiting time<br>
+v. Response time<br>
+<b>i. CPU utilization:</b><br>
+• We want to keep the CPU as busy as possible.<br>
+
+• CPU utilization can range from 0 to 100 percent.<br>
+
+• In a real system, it should range from 40 percent (for a
+lightly loaded system) to 90 percent (for a heavily
+used system).<br>
+<b>ii. Throughput:</b><br>
+• If the CPU is busy executing processes, then work
+is being done.<br>
+
+• The number of processes that are completed
+per time unit, called throughput.<br>
+
+• For long processes, this rate may be one process
+per hour; for short transactions, it may be ten
+processes per second.<br>
+<b>iii. Turnaround time:</b><br>
+• From the point of view of a particular process, the
+important criterion is “how long it takes to execute
+that process?”.<br>
+
+• The interval from the time of submission of a
+process to the time of completion is the
+turnaround time.<br>
+
+• Turnaround time is the sum of the periods spent
+waiting to get into memory, waiting in the ready
+queue, executing on the CPU, and doing I/O.<br>
+<b>iv. Waiting time:</b><br>
+• The CPU-scheduling algorithm does not affect the
+amount of time during which a process executes
+or does I/O.<br>
+
+• It affects only the amount of time that a process
+spends waiting in the ready queue.<br>
+
+• Waiting time is the sum of the periods spent
+waiting in the ready queue.<br>
+<b>v. Response time:</b><br>
+• In an interactive system, turnaround time may not be the best
+criterion.<br>
+• Often, a process can produce some output fairly early and can
+continue computing new results while previous results are
+being output to the user.<br>
+
+• The time from the submission of a request until
+the first response is produced. This measure,
+called response time.<br>
+
+• The turnaround time is generally limited by the speed of the
+output device.<br>
+
+<h1><a href="">To get More Information ...</a></h1>
+</div>
+
+<div id="section3" class="container-fluid bg-info  text-white" style="padding:100px 20px;">
+ <h1>Process Coordination</h1>
+ <ul><li><h2>Basic Concepts of Inter-process Communication </h2></li></ul>
+  A process can be of two types:<br>
+<ul>
+<li>Independent process.</li>
+<li>Co-operating process.</li></ul>
+An independent process is not affected by the execution of other processes while a co-operating process can be affected by other executing processes. Though one can think that those processes, which are running independently, will execute very efficiently, in reality, there are many situations when co-operative nature can be utilized for increasing computational speed, convenience, and modularity. Inter-process communication (IPC) is a mechanism that allows processes to communicate with each other and synchronize their actions. The communication between these processes can be seen as a method of co-operation between them. Processes can communicate with each other through both:
+1. Shared Memory<br>
+2. Message passing <br>
+<b>1. Shared Memory Method:-</b><br>
+There are two processes: Producer and Consumer. The producer produces some items and the Consumer consumes that item. The two processes share a common space or memory location known as a buffer where the item produced by the Producer is stored and from which the Consumer consumes the item if needed. There are two versions of this problem: the first one is known as the unbounded buffer problem in which the Producer can keep on producing items and there is no limit on the size of the buffer, the second one is known as the bounded buffer problem in which the Producer can produce up to a certain number of items before it starts waiting for Consumer to consume it. We will discuss the bounded buffer problem. First, the Producer and the Consumer will share some common memory, then the producer will start producing items. If the total produced item is equal to the size of the buffer, the producer will wait to get it consumed by the Consumer. Similarly, the consumer will first check for the availability of the item. If no item is available, the Consumer will wait for the Producer to produce it. If there are items available, Consumer will consume them.
+<br><b>2. Messaging Passing Method:-</b><br>
+Now, We will start our discussion of the communication between processes via message passing. In this method, processes communicate with each other without using any kind of shared memory. If two processes p1 and p2 want to communicate with each other, they proceed as follows:
+ 
+<ul>
+<li>Establish a communication link (if a link already exists, no need to establish it again.)</li>
+<li>Start exchanging messages using basic primitives.</li></ul>
+We need at least two primitives: <br>
+– send(message, destination) or send(message)<br> 
+– receive(message, host) or receive(message) <br>
+<ul><li><h2>Race Condition</h2></li></ul>
+Race condition occurs when multiple threads read and write the same variable i.e. they have access to some shared data and they try to change it at the same time. In such a scenario threads are “racing” each other to access/change the data. This is a major security vulnerability.<br>
+
+A race condition is a situation that may occur inside a critical section. This happens when the result of multiple thread execution in a critical section differs according to the order in which the threads execute. Race conditions in critical sections can be avoided if the critical section is treated as an atomic instruction. Also, proper thread synchronization using locks or atomic variables can prevent race conditions.
+<br>
+This is a major security vulnerability [CWE-362], and by manipulating the timing of actions anomalous results might appear. This vulnerability arises during a TOCTOU (time-of-check, time-of-use) window.
+<ul><li><h2>Critical Region</h2></li></ul>
+<p>In an operating system, a critical region refers to a section of code or a data structure that must be accessed exclusively by one method or thread at a time. Critical regions are utilized to prevent concurrent entry to shared sources, along with variables, information structures, or devices, that allow you to maintain information integrity and keep away from race conditions.
+
+  The concept of important regions is carefully tied to the want for synchronization and mutual exclusion in multi-threaded or multi-manner environments. Without proper synchronization mechanisms, concurrent admission to shared resources can lead to information inconsistencies, unpredictable conduct, and mistakes.
+  
+  To implement mutual exclusion and shield important areas, operating structures provide synchronization mechanisms, inclusive of locks, semaphores, or monitors. These mechanisms ensure that the handiest one procedure or thread can get the right of entry to the vital location at any given time, even as other procedures or threads are averted from entering till the cutting-edge occupant releases the lock.</p>
+<br><b>Critical Region Characteristics and Requirements:-</b><br>
+Following are the characteristics and requirements for critical regions in an operating system.<br>
+1. Mutual Exclusion -
+Only one procedure or thread can access the important region at a time. This ensures that concurrent entry does not bring about facts corruption or inconsistent states.
+<br>
+2. Atomicity - 
+The execution of code within an essential region is dealt with as an indivisible unit of execution. It way that after a system or thread enters a vital place, it completes its execution without interruption.
+<br>
+3. Synchronization - 
+Processes or threads waiting to go into a essential vicinity are synchronized to prevent simultaneous access. They commonly appoint synchronization primitives, inclusive of locks or semaphores, to govern access and put in force mutual exclusion.
+<br>
+4. Minimal Time Spent in Critical Regions - 
+It is perfect to reduce the time spent inside crucial regions to reduce the capacity for contention and improve gadget overall performance. Lengthy execution within essential regions can increase the waiting time for different strategies or threads.<br>
+<br><ul><li><h2>Message Passing</h2></li></ul>
+So message passing means how a message can be sent from one end to the other end. Either it may be a client-server model or it may be from one node to another node. The formal model for distributed message passing has two timing models one is synchronous and the other is asynchronous. 
+<br>
+The fundamental points of message passing are:
+<br>
+1. In message-passing systems, processes communicate with one another by sending and receiving messages over a communication channel.
+<br>2. The pattern of the connection provided by the channel is described by some topology systems.
+<br>3. The collection of the channels are called a network.
+<br>4. So by the definition of distributed systems, we know that they are geographically set of computers. So it is not possible for one computer to directly connect with some other node.
+<br>5. So all channels in the Message-Passing Model are private.
+<br>6. The sender decides what data has to be sent over the network. An example is, making a phone call.
+<br>7. The data is only fully communicated after the destination worker decides to receive the data. Example when another person receives your call and starts to reply to you.
+<br>8. There is no time barrier. It is in the hand of a receiver after how many rings he receives your call. He can make you wait forever by not picking up the call.
+<br>9. For successful network communication, it needs active participation from both sides.<br>
+<ul><li><h2>Deadlock</h2></li></ul>
+A process in operating system uses resources in the following way. <br>
+1. Requests a resource <br>
+2. Use the resource <br>
+3. Releases the resource<br> 
+A deadlock is a situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. 
+
+Consider an example when two trains are coming toward each other on the same track and there is only one track, none of the trains can move once they are in front of each other. A similar situation occurs in operating systems when there are two or more processes that hold some resources and wait for resources held by other(s). For example, in the below diagram, Process 1 is holding Resource 1 and waiting for resource 2 which is acquired by process 2, and process 2 is waiting for resource 1. 
+<ul><li><h2>Deadlock Characterization</h2></li></ul>
+<b>Mutual Exclusion</b><br>
+There should be a resource that can only be held by one process at a time. In the diagram below, there is a single instance of Resource 1 and it is held by Process 1 only.<br>
+<b>Hold and Wait</b><br>
+A process can hold multiple resources and still request more resources from other processes which are holding them. In the diagram given below, Process 2 holds Resource 2 and Resource 3 and is requesting the Resource 1 which is held by Process 1.<br>
+<b>No Preemption</b><br>
+A resource cannot be preempted from a process by force. A process can only release a resource voluntarily. In the diagram below, Process 2 cannot preempt Resource 1 from Process 1. It will only be released when Process 1 relinquishes it voluntarily after its execution is complete.<br>
+<b>Circular Wait</b><br>
+A process is waiting for the resource held by the second process, which is waiting for the resource held by the third process and so on, till the last process is waiting for a resource held by the first process. This forms a circular chain. For example: Process 1 is allocated Resource2 and it is requesting Resource 1. Similarly, Process 2 is allocated Resource 1 and it is requesting Resource 2. This forms a circular wait loop.
+<h1><a href="">To get More Information ...</a></h1>
+</div>
+      
+        
+<div id="section4" class="container-fluid bg-secondary  text-white" style="padding:100px 20px;">
+  <h1>Memory Management</h1>
+  The term memory can be defined as a collection of data in a specific format. It is used to store instructions and process data. The memory comprises a large array or group of words or bytes, each with its own location. The primary purpose of a computer system is to execute programs. These programs, along with the information they access, should be in the main memory during execution. The CPU fetches instructions from memory according to the value of the program counter.
+
+  To achieve a degree of multiprogramming and proper utilization of memory, memory management is important. Many memory management methods exist, reflecting various approaches, and the effectiveness of each algorithm depends on the situation.
+<br><ul><li><h2>Swapping</h2></li></ul>
+To increase CPU utilization in multiprogramming, a memory management scheme known as swapping can be used. Swapping is the process of bringing a process into memory and then temporarily copying it to the disc after it has run for a while. The purpose of swapping in an operating system is to access data on a hard disc and move it to RAM so that application programs can use it. It’s important to remember that swapping is only used when data isn’t available in RAM. Although the swapping process degrades system performance, it allows larger and multiple processes to run concurrently. Because of this, swapping is also known as memory compaction.  The CPU scheduler determines which processes are swapped in and which are swapped out. Consider a multiprogramming environment that employs a priority-based scheduling algorithm. When a high-priority process enters the input queue, a low-priority process is swapped out so the high-priority process can be loaded and executed. When this process terminates, the low priority process is swapped back into memory to continue its execution.
+<br>Swapping has been subdivided into two concepts: swap-in and swap-out.
+<br>
+<ul><li>Swap-out is a technique for moving a process from RAM to the hard disc.</li>
+<li>Swap-in is a method of transferring a program from a hard disc to main memory, or RAM.</li></ul>
+<ul><li><h2>Contiguous Memory Allocating</h2></li></ul>
+Contiguous memory allocation is a memory allocation strategy. As the name implies, we utilize this technique to assign contiguous blocks of memory to each task. Thus, whenever a process asks to access the main memory, we allocate a continuous segment from the empty region to the process based on its size. In this technique, memory is allotted in a continuous way to the processes. Contiguous Memory Management has two types:
+<br>
+1. Fixed(or Static) Partition<br>
+2. Variable(or Dynamic) Partitioning<br>
+1. Fixed Partition Scheme<br>
+In the fixed partition scheme, memory is divided into fixed number of partitions. Fixed means number of partitions are fixed in the memory. In the fixed partition, in every partition only one process will be accommodated. Degree of multi-programming is restricted by number of partitions in the memory. Maximum size of the process is restricted by maximum size of the partition. Every partition is associated with the limit registers.  <br>
+2. Variable Partition Scheme<br>
+In the variable partition scheme, initially memory will be single continuous free block. Whenever the request by the process arrives, accordingly partition will be made in the memory. If the smaller processes keep on coming then the larger partitions will be made into smaller partitions.
+<ul>
+<li>In variable partition schema initially, the memory will be full contiguous free block</li>
+<li>Memory divided into partitions according to the process size where process size will vary.</li>
+<li>One partition is allocated to each active partition.</li></ul>
+<ul><li><h2>Paging</h2></li></ul>
+Paging is a memory management scheme that eliminates the need for a contiguous allocation of physical memory. The process of retrieving processes in the form of pages from the secondary storage into the main memory is known as paging. The basic purpose of paging is to separate each procedure into pages. Additionally, frames will be used to split the main memory. This scheme permits the physical address space of a process to be non – contiguous.
+
+In paging, the physical memory is divided into fixed-size blocks called page frames, which are the same size as the pages used by the process. The process’s logical address space is also divided into fixed-size blocks called pages, which are the same size as the page frames. When a process requests memory, the operating system allocates one or more page frames to the process and maps the process’s logical pages to the physical page frames.
+
+The mapping between logical pages and physical page frames is maintained by the page table, which is used by the memory management unit to translate logical addresses into physical addresses. The page table maps each logical page number to a physical page frame number.
+<ul><li><h2>Demand paging</h2></li></ul>
+Demand paging can be described as a memory management technique that is used in operating systems to improve memory usage and system performance. Demand paging is a technique used in virtual memory systems where pages enter main memory only when requested or needed by the CPU.
+
+In demand paging, the operating system loads only the necessary pages of a program into memory at runtime, instead of loading the entire program into memory at the start. A page fault occurred when the program needed to access a page that is not currently in memory. The operating system then loads the required pages from the disk into memory and updates the page tables accordingly. This process is transparent to the running program and it continues to run as if the page had always been in memory.
+<ul><li><h2>Trashing</h2></li></ul>
+Thrashing is the term used to describe a state in which excessive paging activity takes place in computer systems, especially in operating systems that use virtual memory, severely impairing system performance. Thrashing occurs when a system’s high memory demand and low physical memory capacity cause it to spend a large amount of time rotating pages between main memory (RAM) and secondary storage, which is typically a hard disc.
+
+It is caused due to insufficient physical memory, overloading and poor memory management. The operating system may use a variety of techniques to lessen thrashing, including lowering the number of running processes, adjusting paging parameters, and improving memory allocation algorithms. Increasing the system’s physical memory (RAM) capacity can also lessen thrashing by lowering the frequency of page swaps between RAM and the disc.
+
+<h1><a href="">To get More Information ...</a></h1>
+
+</div>
+
+<div id="section5" class="container-fluid bg-success  text-white" style="padding:100px 20px;">
+  <h1>Storage Management</h1>
+  <ul><li><h2>File System</h2></li></ul>
+  A file system is a method an operating system uses to store, organize, and manage files and directories on a storage device. Some common types of file systems include:
+<br>
+1.FAT (File Allocation Table): An older file system used by older versions of Windows and other operating systems.
+<br>2.NTFS (New Technology File System): A modern file system used by Windows. It supports features such as file and folder permissions, compression, and encryption.
+<br>3. ext (Extended File System): A file system commonly used on Linux and Unix-based operating systems.
+<br>4.HFS (Hierarchical File System): A file system used by macOS.
+<br>5. APFS (Apple File System): A new file system introduced by Apple for their Macs and iOS devices.
+<br>A file is a collection of related information that is recorded on secondary storage. Or file is a collection of logically related entities. From the user’s perspective, a file is the smallest allotment of logical secondary storage.   
+<br><h4>Issues Handled By File System</h4>
+We’ve seen a variety of data structures where the file could be kept. The file system’s job is to keep the files organized in the best way possible.
+A free space is created on the hard drive whenever a file is deleted from it. To reallocate them to other files, many of these spaces may need to be recovered. Choosing where to store the files on the hard disc is the main issue with files one block may or may not be used to store a file. It may be kept in the disk’s non-contiguous blocks. We must keep track of all the blocks where the files are partially located.
+<ul><li><h2>File Access Method</h2></li></ul>
+When a file is used, information is read and accessed into computer memory and there are several ways to access this information of the file. Some systems provide only one access method for files. Other systems, such as those of IBM, support many access methods, and choosing the right one for a particular application is a major design problem. 
+
+<br>There are three ways to access a file into a computer system: Sequential-Access, Direct Access, Index sequential Method. 
+
+<br><b>1. Sequential Access – </b>
+It is the simplest access method. Information in the file is processed in order, one record after the other. This mode of access is by far the most common; for example, editor and compiler usually access the file in this fashion. 
+Read and write make up the bulk of the operation on a file. A read operation -read next- read the next position of the file and automatically advance a file pointer, which keeps track I/O location. Similarly, for the -write next- append to the end of the file and advance to the newly written material. 
+<br><b>2.Direct Access – </b>
+Another method is direct access method also known as relative access method. A fixed-length logical record that allows the program to read and write record rapidly. in no particular order. The direct access is based on the disk model of a file since disk allows random access to any file block. For direct access, the file is viewed as a numbered sequence of block or record. Thus, we may read block 14 then block 59, and then we can write block 17. There is no restriction on the order of reading and writing for a direct access file. 
+A block number provided by the user to the operating system is normally a relative block number, the first relative block of the file is 0 and then 1 and so on.
+<br><b>3.Index sequential method –</b> 
+  It is the other method of accessing a file that is built on the top of the sequential access method. These methods construct an index for the file. The index, like an index in the back of a book, contains the pointer to the various blocks. To find a record in the file, we first search the index, and then by the help of pointer we access the file directly. 
+<ul><li><h2>Directory Structure</h2></li></ul>
+A directory is a container that is used to contain folders and files. It organizes files and folders in a hierarchical manner. 
+Following are the logical structures of a directory, each providing a solution to the problem faced in previous type of directory structure.  
+<br>
+<b><u>1) Single-level directory:</u></b><br>
+ 
+The single-level directory is the simplest directory structure. In it, all files are contained in the same directory which makes it easy to support and understand. 
+A single level directory has a significant limitation, however, when the number of files increases or when the system has more than one user. Since all the files are in the same directory, they must have a unique name. If two users call their dataset test, then the unique name rule violated.
+<br><b><u>2) Two-level directory:</u></b><br>
+As we have seen, a single level directory often leads to confusion of files names among different users. The solution to this problem is to create a separate directory for each user. 
+
+In the two-level directory structure, each user has their own user files directory (UFD). The UFDs have similar structures, but each lists only the files of a single user. System’s master file directory (MFD) is searched whenever a new user id is created.
+<br><b><u>3) Tree Structure/ Hierarchical Structure:</u></b> 
+Tree directory structure of operating system is most commonly used in our personal computers. User can create files and subdirectories too, which was a disadvantage in the previous directory structures. 
+
+This directory structure resembles a real tree upside down, where the root directory is at the peak. This root contains all the directories for each user. The users can create subdirectories and even store files in their directory. 
+
+A user do not have access to the root directory data and cannot modify it. And, even in this directory the user do not have access to other user’s directories.  The structure of tree directory is given below which shows how there are files and subdirectories in each user’s directory. 
+<br><b><u>4) Acyclic Graph Structure:</u></b> 
+As we have seen the above three directory structures, where none of them have the capability to access one file from multiple directories. The file or the subdirectory could be accessed through the directory it was present in, but not from the other directory. 
+
+This problem is solved in acyclic graph directory structure, where a file in one directory can be accessed from multiple directories. In this way, the files could be shared in between the users. It is designed in a way that multiple directories point to a particular directory or file with the help of links. 
+
+In the below figure, this explanation can be nicely observed, where a file is shared between multiple users. If any user makes a change, it would be reflected to both the users. 
+<ul><li><h2>Free space Management</h2></li></ul>
+Free space management is a critical aspect of operating systems as it involves managing the available storage space on the hard disk or other secondary storage devices. The operating system uses various techniques to manage free space and optimize the use of storage devices. Here are some of the commonly used free space management techniques:
+<br>
+1. Linked Allocation: In this technique, each file is represented by a linked list of disk blocks. When a file is created, the operating system finds enough free space on the disk and links the blocks of the file to form a chain. This method is simple to implement but can lead to fragmentation and wastage of space.
+<br>2. Contiguous Allocation: In this technique, each file is stored as a contiguous block of disk space. When a file is created, the operating system finds a contiguous block of free space and assigns it to the file. This method is efficient as it minimizes fragmentation but suffers from the problem of external fragmentation.
+<br>3. Indexed Allocation: In this technique, a separate index block is used to store the addresses of all the disk blocks that make up a file. When a file is created, the operating system creates an index block and stores the addresses of all the blocks in the file. This method is efficient in terms of storage space and minimizes fragmentation.
+<br>4. File Allocation Table (FAT): In this technique, the operating system uses a file allocation table to keep track of the location of each file on the disk. When a file is created, the operating system updates the file allocation table with the address of the disk blocks that make up the file. This method is widely used in Microsoft Windows operating systems.
+<br>5. Volume Shadow Copy: This is a technology used in Microsoft Windows operating systems to create backup copies of files or entire volumes. When a file is modified, the operating system creates a shadow copy of the file and stores it in a separate location. This method is useful for data recovery and protection against accidental file deletion.
+<br>Overall, free space management is a crucial function of operating systems, as it ensures that storage devices are utilized efficiently and effectively.
+
+The system keeps tracks of the free disk blocks for allocating space to files when they are created. Also, to reuse the space released from deleting the files, free space management becomes crucial. The system maintains a free space list which keeps track of the disk blocks that are not allocated to some file or directory. The free space list can be implemented mainly as:
+
+<br><b>1. Bitmap or Bit vector – </b>A Bitmap or Bit Vector is series or collection of bits where each bit corresponds to a disk block. The bit can take two values: 0 and 1: 0 indicates that the block is allocated and 1 indicates a free block. The given instance of disk blocks on the disk in Figure 1 (where green blocks are allocated) can be represented by a bitmap of 16 bits as: 0000111000000110.
+<br><b>2. Linked List – </b>In this approach, the free disk blocks are linked together i.e. a free block contains a pointer to the next free block. The block number of the very first disk block is stored at a separate location on disk and is also cached in memory.
+<br><b>3. Grouping –</b> This approach stores the address of the free blocks in the first free block. The first free block stores the address of some, say n free blocks. Out of these n blocks, the first n-1 blocks are actually free and the last block contains the address of next free n blocks. An advantage of this approach is that the addresses of a group of free disk blocks can be found easily.
+<br><b>4.Counting – </b>This approach stores the address of the first free disk block and a number n of free contiguous disk blocks that follow the first block. Every entry in the list would contain:
+<br>1. Address of first free disk block
+<br>2. A number n
+<ul><li><h2>Disk Scheduling</h2></li></ul>
+Disk scheduling is done by operating systems to schedule I/O requests arriving for the disk. Disk scheduling is also known as I/O Scheduling.
+
+<h4>Importance of Disk Scheduling in Operating System</h4>
+<ul><li>Multiple I/O requests may arrive by different processes and only one I/O request can be served at a time by the disk controller. Thus other I/O requests need to wait in the waiting queue and need to be scheduled.</li>
+<li>Two or more requests may be far from each other so this can result in greater disk arm movement.</li>
+<li>Hard drives are one of the slowest parts of the computer system and thus need to be accessed in an efficient manner.</li></ul>
+<h5>Key Terms Associated with Disk Scheduling</h5>
+<b>Seek Time:</b> Seek time is the time taken to locate the disk arm to a specified track where the data is to be read or written. So the disk scheduling algorithm that gives a minimum average seek time is better.
+<br><b>Rotational Latency:</b> Rotational Latency is the time taken by the desired sector of the disk to rotate into a position so that it can access the read/write heads. So the disk scheduling algorithm that gives minimum rotational latency is better.
+<br><b>Transfer Time:</b> Transfer time is the time to transfer the data. It depends on the rotating speed of the disk and the number of bytes to be transferred.
+
+  <h1><a href="https://youtu.be/2S4At1yakug?si=5-wTHXDnfz4WL0hu">To get More Information ...</a></h1>
+
+</div>
+
+
+<!-- PCOM -->
+<div id="section6" class="container-fluid bg-warning text-white" style="padding:100px 20px;">
+  <h1>Special-Purpose Operating System</h1>
+  <ul><li><h2>Open Source and Proprietary Operating</h2></li></ul>
+  1. Open source Software: Open source software is computer software whose source code is available openly on the internet and programmers can modify it to add new features and capabilities without any cost. Here the software is developed and tested through open collaboration. This software is managed by an open-source community of developers. It provides community support, as well as commercial support, which is available for maintenance. We can get it for free of cost. This software also sometimes comes with a license and sometimes does not. This license provides some rights to users.
+<ul>
+<li>The software can be used for any purpose</li>
+<li>Allows to study how the software works</li>
+<li>Freedom to modify and improve the program</li>
+<li>No restrictions on redistribution</li></ul>
+Some examples of Open source software include Android, Ubuntu, Firefox, Open Office, etc. 
+<br>2. Proprietary Software: Proprietary software is computer software where the source codes are publicly not available only the company that has created them can modify it. Here the software is developed and tested by the individual or organization by which it is owned not by the public. This software is managed by a closed team of individuals or groups that developed it. We have to pay to get this software and its commercial support is available for maintenance. The company gives a valid and authenticated license to the users to use this software. But this license puts some restrictions on users also like.
+<ul>
+<li>Number of installations of this software into computers</li>
+<li>Restrictions on sharing of software illegally</li>
+<li>Time period up to which software will operate</li>
+<li>Number of features allowed to use</li></ul>
+<ul><li><h2>Distributed Operating System</h2></li></ul>
+In a Distributed OS, multiple CPUs are utilized, but for end-users, it appears as a typical centralized operating system. It enables the sharing of various resources such as CPUs, disks, network interfaces, nodes, and computers across different sites, thereby expanding the available data within the entire system.
+
+Effective communication channels like high-speed buses and telephone lines connect all processors, each equipped with its own local memory and other neighboring processors. Due to its characteristics, a distributed operating system is classified as a loosely coupled system. It encompasses multiple computers, nodes, and sites, all interconnected through LAN/WAN lines. The ability of a Distributed OS to share processing resources and I/O files while providing users with a virtual machine abstraction is an important feature.
+<h4>Types of Distributed Operating System</h4>
+1. Client-Server Systems<br>
+This strongly connected operating system is appropriate for multiprocessors and homogenous multicomputer. It functions as a centralized server, handling and approving all requests originating from client systems.
+<br>
+2. Peer-to-Peer Systems<br>
+Peer-to-Peer System is loosely coupled system is implemented in computer network applications, consisting of multiple processors without shared memories or clocks. Each processor possesses its own local memory, and communication between processors occurs through high-speed buses or telephone lines.
+<br>
+3. Middleware<br>
+Middleware facilitates interoperability among applications running on different operating systems. By employing these services, applications can exchange data with each other, ensuring distribution transparency.
+<br>
+4. Three-Tier<br>
+Development is made easier because client data is saved in the intermediate tier rather than the client itself. Online applications are where this kind of architecture is most frequently found.
+<br>
+5. N-Tier<br>
+N-tier systems are utilized when a server or application has to send requests to other corporate services over a network.
+<br>
+<h4>Applications of Distributed Operating System</h4>
+The applications of a Distributed OS encompass various domains as below:<br>
+<ul>
+<li>Internet Technology</li>
+<li>Distributed Databases System</li>
+<li>Air Traffic Control System</li>
+<li>Airline Reservation Control Systems</li>
+<li>Peer-to-Peer Networks System</li>
+<li>Telecommunication Networks</li>
+<li>Scientific Computing System</li>
+<li>Cluster Computing</li>
+<li>Grid Computing</li>
+<li>Data Rendering</li></ul>
+<ul><li><h2>Embedded Operating System</h2></li></ul>
+An embedded operating system is a specialized operating system (OS) designed to perform a specific task for a device that is not a computer. The main job of an embedded OS is to run the code that allows the device to do its job. The embedded OS also makes the device's hardware accessible to software that is running on top of the OS.
+
+An embedded OS often works within an embedded system. An embedded system is a computer that supports a machine. It performs one task in the bigger machine. Examples include computer systems in cars, traffic lights, digital televisions, ATMs, airplane controls, point of sale (PoS) terminals, digital cameras, GPS navigation systems, elevators and Smart meters.
+
+Networks of devices containing embedded systems make up the internet of things (IoT). The embedded systems perform basic operations inside IoT devices, such as transferring data over a network without human interaction.
+<ul><li><h2>IOT Operating System</h2></li></ul>
+In today’s connected world, IoT (Internet of Things) has become a game-changer. It’s transforming various industries. IoT refers to a vast network of connected devices and sensors that share, process, and analyze data to enable smooth communication and automation.
+
+An IoT operating system (OS) allows us to communicate with cloud services across a global network within tight constraints of memory bandwidth, data volume, and processing power. IoT OS enables devices and applications to communicate with each other and with other systems, including cloud platforms and services
+<h4>Features of IOT Operating System</h4>
+An IOT comes up with the following Features:
+<br>
+<b>1. Connectivity</b><br>
+When it comes to IoT, connectivity is the most important factor to consider. Without proper communication between the various components of the IoT ecosystem (e.g. sensors, compute engine, data hub, etc.), no proper business use cases can be executed. IoT devices are connected via radio waves, Bluetooth, and wifi. We can use various protocols of internet connectivity layers to optimize efficiency and general connectivity across IoT ecosystems and Industries.
+<br>
+<b>2. Scale</b><br>
+Designing IoT devices with easy scalability, both up and down, on-demand is essential. IoT is utilized across a wide range of applications, ranging from smart home automation to the automation of large factories and workstations.
+<br>
+<b>3. Intelligence</b><br>
+In almost every IOT use case in today’s world, the data is used to make important business insights and drive important business decisions. We develop machine learning/deep learning models on top of this massive data to obtain valuable insights.
+<br>
+<b>4. Real-time processing requirements</b><br>
+IoT apps process data on the go. If the OS cannot support it, the purpose is lost, and the application will not function the way it is supposed to.
+<br>
+<b>5. Advanced Security</b><br>
+One of the biggest concerns, perhaps, in IoT is data security. It is the responsibility of the operating system to ensure the information being transmitted stays protected at all times and across all devices. Here is what the next section is all about. For more Features.
+<br>
+<ul><li><h2>Network Operating System</h2></li></ul>
+The basic definition of an operating system is that the operating system is the interface between the computer hardware and the user. In daily life, we use the operating system on our devices which provides a good GUI, and many more features. Similarly, a network operating system(NOS) is software that connects multiple devices and computers on the network and allows them to share resources on the network. Let’s see what are the functions of the network operating system.
+
+<h4>Functions of the NOS (Network Operating System)</h4>
+<b>The following are the main functions of NOS:</b><br>
+<ul>
+<li>Creating and managing user accounts on the network.</li>
+<li>Controlling access to resources on the network.</li>
+<li>Provide communication services between the devices on the network.</li>
+<li>Monitor and troubleshoot the network.</li>
+<li>Configuring and Managing the resources on the network.</li></ul>
+Now let’s see the type of Network Operating systems.
+
+<h4>Types of Network Operating Systems</h4>
+There are mainly two types of networks, one is peer-to-peer and another is client/server. Now let’s see each type one by one.
+<ul>
+<li><b>Peer to Peer:</b> Peer-to-peer network operating systems allow the sharing of resources and files with small-sized networks and having fewer resources. In general, peer-to-peer network operating systems are used on LAN.</li>
+<li><b>Client/server:</b> Client-server network operating systems provide users access to resources through the central server. This NOS is too expensive to implement and maintain. This operating system is good for the big networks which provide many services.</li>
+</ul>
+
+
+
+
+  <h1><a href="https://youtu.be/2S4At1yakug?si=5-wTHXDnfz4WL0hu">To get More Information ...</a></h1>
+        </div>
+      </div>
+</div>
+
+</body>
+<footer class="footer">
+  <p>&copy; Self Study Reserved Rights 2024</p>
+  
+  </ul>
+</div>
+</footer>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
